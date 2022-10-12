@@ -42,7 +42,7 @@ function Contact() {
               <h1 className="display-5 fw-bold">Contact</h1>
               <p>Feel free to contact me if you have any questions</p>
               <div className="border rounded-2 container-sm p-4">
-                <Form action="" method="POST">
+                <Form action="https://formspree.io/f/xwkzqrar" method="POST">
                   <Form.Group className="mb-3" controlId="formName">
                     <Form.Label>
                       <span className="fas fa-user"></span> Your Name

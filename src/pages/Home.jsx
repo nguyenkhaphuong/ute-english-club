@@ -457,7 +457,7 @@ function Home() {
                 />
               </Col>
               <Col md={6}>
-                <Form action="" method="POST">
+                <Form action="https://formspree.io/f/xwkzqrar" method="POST">
                   <Form.Group className="mb-3" controlId="formName">
                     <Form.Label>
                       <span className="fas fa-user"></span> Your Name
