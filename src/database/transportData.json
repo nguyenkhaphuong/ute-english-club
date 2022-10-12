@@ -1,0 +1,66 @@
+[
+    {
+        "id":1,
+        "word":"car",
+        "audio":"https://dictionary.cambridge.org/media/english/us_pron/c/car/car__/car.mp3",
+        "image":"https://cdn-icons-png.flaticon.com/512/741/741407.png",
+        "phonetic":"/kɑːr/",
+        "translation":"xe hơi"
+    },
+    {
+        "id":2,
+        "word":"bicycle",
+        "audio":"https://dictionary.cambridge.org/media/english/us_pron/b/bic/bicyc/bicycle.mp3",
+        "image":"https://cdn-icons-png.flaticon.com/512/562/562008.png",
+        "phonetic":"/ˈbaɪsɪkl/",
+        "translation":"xe đạp"
+    },
+    {
+        "id":3,
+        "word":"plane",
+        "audio":"https://dictionary.cambridge.org/media/english/us_pron/p/pla/plain/plain.mp3",
+        "image":"https://cdn-icons-png.flaticon.com/512/870/870194.png",
+        "phonetic":"/pleɪn/",
+        "translation":"máy bay"
+    },
+    {
+        "id":4,
+        "word":"bus",
+        "audio":"https://dictionary.cambridge.org/media/english/us_pron/b/bus/bus__/bus.mp3",
+        "image":"https://cdn-icons-png.flaticon.com/512/808/808375.png",
+        "phonetic":"/bʌs/",
+        "translation":"xe buýt"
+    },
+    {
+        "id":5,
+        "word":"train",
+        "audio":"https://dictionary.cambridge.org/media/english/us_pron/t/tra/train/train.mp3",
+        "image":"https://cdn-icons-png.flaticon.com/512/1974/1974098.png",
+        "phonetic":"/treɪn/",
+        "translation":"xe lửa"
+    },
+    {
+        "id":6,
+        "word":"truck",
+        "audio":"https://dictionary.cambridge.org/media/english/us_pron/t/tru/truck/truck.mp3",
+        "image":"https://cdn-icons-png.flaticon.com/512/713/713311.png",
+        "phonetic":"/trʌk/",
+        "translation":"xe tải"
+    },
+    {
+        "id":7,
+        "word":"ambulance",
+        "audio":"https://dictionary.cambridge.org/vi/media/english/us_pron/a/amb/ambul/ambulance.mp3",
+        "image":"https://cdn-icons-png.flaticon.com/512/2869/2869684.png",
+        "phonetic":"/ˈæmbjələns/",
+        "translation":"xe cứu thương"
+    },
+    {
+        "id":8,
+        "word":"helicopter",
+        "audio":"https://dictionary.cambridge.org/vi/media/english/us_pron/h/hel/helic/helicopter.mp3",
+        "image":"https://cdn-icons-png.flaticon.com/512/3097/3097188.png",
+        "phonetic":"/ˈhelɪkɑːptər/",
+        "translation":"máy bay trực thăng"
+    }
+]

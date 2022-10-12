@@ -1,0 +1,58 @@
+[
+    {
+        "id":1,
+        "word":"hello",
+        "audio":"https://www.oxfordlearnersdictionaries.com/media/english/us_pron/h/hel/hello/hello__us_1_rr.mp3",
+        "image":"https://cdn-icons-png.flaticon.com/512/5129/5129597.png",
+        "phonetic":"/həˈləʊ/",
+        "translation":"xin chào"
+    },
+    {
+        "id":2,
+        "word":"good morning",
+        "audio":"https://www.oxfordlearnersdictionaries.com/media/english/us_pron/g/goo/good_/good_morning_1_us_1.mp3",
+        "image":"https://cdn-icons-png.flaticon.com/512/6744/6744598.png",
+        "phonetic":"/ˌɡʊd ˈmɔːrnɪŋ/",
+        "translation":"chào buổi sáng"
+    },
+    {
+        "id":3,
+        "word":"good afternoon",
+        "audio":"https://www.oxfordlearnersdictionaries.com/media/english/us_pron/g/goo/good_/good_afternoon_1_us_1.mp3",
+        "image":"https://cdn-icons-png.flaticon.com/512/2280/2280658.png",
+        "phonetic":"/ˌɡʊd æftərˈnuːn/",
+        "translation":"chào buổi chiều"
+    },
+    {
+        "id":4,
+        "word":"good evening",
+        "audio":"https://www.oxfordlearnersdictionaries.com/media/english/us_pron/g/goo/good_/good_evening_1_us_1.mp3",
+        "image":"https://cdn-icons-png.flaticon.com/512/547/547433.png",
+        "phonetic":"/ˌɡʊd ˈiːvnɪŋ/",
+        "translation":"chào buổi tối"
+    },
+    {
+        "id":5,
+        "word":"good night",
+        "audio":"https://www.oxfordlearnersdictionaries.com/media/english/us_pron/g/goo/goodn/goodnight__us_1.mp3",
+        "image":"https://cdn-icons-png.flaticon.com/512/2811/2811379.png",
+        "phonetic":"/ˌɡʊdˈnaɪt/",
+        "translation":"chúc ngủ ngon"
+    },
+    {
+        "id":6,
+        "word":"thank you",
+        "audio":"https://www.oxfordlearnersdictionaries.com/media/english/us_pron/t/tha/thank/thank_you_1_us_1.mp3",
+        "image":"https://cdn-icons-png.flaticon.com/512/3714/3714890.png",
+        "phonetic":"/ˈθæŋk juː/",
+        "translation":"cảm ơn"
+    },
+    {
+        "id":7,
+        "word":"goodbye",
+        "audio":"https://www.oxfordlearnersdictionaries.com/media/english/us_pron/g/goo/goodb/goodbye__us_1_rr.mp3",
+        "image":"https://cdn-icons-png.flaticon.com/512/4081/4081653.png",
+        "phonetic":"/ˌɡʊdˈbaɪ/",
+        "translation":"chào tạm biệt"
+    }
+]

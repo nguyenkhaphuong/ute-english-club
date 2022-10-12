@@ -1,0 +1,13 @@
+@import "../../global.scss";
+
+footer {
+  background: linear-gradient(
+    135deg,
+    rgba(62, 64, 149, 1) 53%,
+    rgba(237, 50, 55, 1) 100%
+  );
+  width: 100%;
+  color: white;
+  position: fixed;
+  bottom: 0;
+}

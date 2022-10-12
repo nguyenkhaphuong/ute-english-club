@@ -1,0 +1,14 @@
+.App {
+  height: auto;
+
+  .sections {
+    width: 100%;
+    height: calc(100vh - 50px);
+    position: relative;
+    top: 70px;
+
+    > * {
+      padding-bottom: 70px;
+    }
+  }
+}

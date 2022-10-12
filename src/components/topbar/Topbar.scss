@@ -1,0 +1,13 @@
+@import "../../global.scss";
+
+.nav-color {
+  background: linear-gradient(
+    135deg,
+    rgba(62, 64, 149, 1) 53%,
+    rgba(237, 50, 55, 1) 100%
+  );
+}
+
+.nav-align {
+  justify-content: flex-end;
+}

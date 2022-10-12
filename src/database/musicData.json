@@ -1,0 +1,98 @@
+[
+    {
+        "id":1,
+        "word":"artist",
+        "audio":"https://www.oxfordlearnersdictionaries.com/media/english/us_pron/a/art/artis/artist__us_1.mp3",
+        "image":"https://cdn-icons-png.flaticon.com/512/7417/7417828.png",
+        "phonetic":"/ˈɑːrtɪst/",
+        "translation":"nghệ sĩ (ca sĩ, diễn viên,...)"
+    },
+    {
+        "id":2,
+        "word":"guitarist",
+        "audio":"https://www.oxfordlearnersdictionaries.com/media/english/us_pron/g/gui/guita/guitarist__us_1.mp3",
+        "image":"https://cdn-icons-png.flaticon.com/512/3048/3048387.png",
+        "phonetic":"/ɡɪˈtɑːrɪst/",
+        "translation":"nghệ sĩ chơi guitar"
+    },
+    {
+        "id":3,
+        "word":"pianist",
+        "audio":"https://www.oxfordlearnersdictionaries.com/media/english/us_pron/p/pia/piani/pianist__us_1_rr.mp3",
+        "image":"https://cdn-icons-png.flaticon.com/512/1995/1995307.png",
+        "phonetic":"/ˈpiːənɪst/",
+        "translation":"nghệ sĩ chơi piano"
+    },
+    {
+        "id":4,
+        "word":"singer",
+        "audio":"https://www.oxfordlearnersdictionaries.com/media/english/us_pron/s/sin/singe/singer__us_1.mp3",
+        "image":"https://cdn-icons-png.flaticon.com/512/3381/3381009.png",
+        "phonetic":"/ˈsɪŋər/",
+        "translation":"ca sĩ"
+    },
+    {
+        "id":5,
+        "word":"musical instrument",
+        "audio":"https://www.oxfordlearnersdictionaries.com/media/english/us_pron/m/mus/music/musical_instrument_1_us_1.mp3",
+        "image":"https://cdn-icons-png.flaticon.com/512/4419/4419474.png",
+        "phonetic":"/ˌmjuːzɪkl ˈɪnstrəmənt/",
+        "translation":"nhạc cụ"
+    },
+    {
+        "id":6,
+        "word":"guitar",
+        "audio":"https://www.oxfordlearnersdictionaries.com/media/english/us_pron/g/gui/guita/guitar__us_2.mp3",
+        "image":"https://cdn-icons-png.flaticon.com/512/2892/2892202.png",
+        "phonetic":"/ɡɪˈtɑːr/",
+        "translation":"đàn ghi-ta"
+    },
+    {
+        "id":7,
+        "word":"piano",
+        "audio":"https://www.oxfordlearnersdictionaries.com/media/english/us_pron/p/pia/piano/piano__us_1.mp3",
+        "image":"https://cdn-icons-png.flaticon.com/512/4311/4311197.png",
+        "phonetic":"/piˈænəʊ/",
+        "translation":"đàn piano"
+    },
+    {
+        "id":8,
+        "word":"violin",
+        "audio":"https://www.oxfordlearnersdictionaries.com/media/english/us_pron/v/vio/violi/violin__us_1.mp3",
+        "image":"https://cdn-icons-png.flaticon.com/512/6452/6452269.png",
+        "phonetic":"/ˌvaɪəˈlɪn/",
+        "translation":"đàn vi-ô-lông"
+    },
+    {
+        "id":9,
+        "word":"genre",
+        "audio":"https://www.oxfordlearnersdictionaries.com/media/english/us_pron/g/gen/genre/genre__us_1.mp3",
+        "image":"https://cdn-icons-png.flaticon.com/512/4378/4378932.png",
+        "phonetic":"/ˈʒɑːnrə/",
+        "translation":"thể loại (nhạc, phim,...)"
+    },
+    {
+        "id":10,
+        "word":"rap",
+        "audio":"https://www.oxfordlearnersdictionaries.com/media/english/us_pron/r/rap/rap__/rap__us_1.mp3",
+        "image":"https://cdn-icons-png.flaticon.com/512/5903/5903404.png",
+        "phonetic":"/ræp/",
+        "translation":"nhạc rap"
+    },
+    {
+        "id":11,
+        "word":"jazz",
+        "audio":"https://www.oxfordlearnersdictionaries.com/media/english/us_pron/j/jaz/jazz_/jazz__us_1.mp3",
+        "image":"https://cdn-icons-png.flaticon.com/512/1882/1882657.png",
+        "phonetic":"/dʒæz/",
+        "translation":"nhạc jazz"
+    },
+    {
+        "id":12,
+        "word":"pop music",
+        "audio":"https://www.oxfordlearnersdictionaries.com/media/english/us_pron/p/pop/pop_m/pop_music_1_us_1.mp3",
+        "image":"https://cdn-icons-png.flaticon.com/512/4908/4908768.png",
+        "phonetic":"/ˈpɑːp mjuːzɪk/",
+        "translation":"nhạc pop"
+    }
+]
