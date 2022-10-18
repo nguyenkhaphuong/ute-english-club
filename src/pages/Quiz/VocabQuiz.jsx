@@ -70,8 +70,9 @@ function VocabQuiz() {
             {showScore ? (
               <div className="display-5 score-section">
                 You scored {score} out of {questions.length}
+                <br />
                 <Button
-                  className="d-block rounded p-2 mt-3 fw-bold"
+                  className="rounded p-2 mt-3 me-3 fw-bold"
                   onClick={() => window.location.reload(false)}
                   style={{
                     background:
@@ -82,7 +83,7 @@ function VocabQuiz() {
                   Reset Quiz
                 </Button>
                 <Button
-                  className="d-inline rounded p-2 mt-3 fw-bold"
+                  className="rounded p-2 mt-3 me-3 fw-bold"
                   as={Link}
                   to="/quiz"
                   style={{
