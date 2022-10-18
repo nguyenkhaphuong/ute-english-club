@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 
 function GrammarQuiz() {
@@ -75,6 +76,18 @@ function GrammarQuiz() {
                   }}
                 >
                   Reset Quiz
+                </Button>
+                <Button
+                  className="d-inline rounded p-2 mt-3 fw-bold"
+                  as={Link}
+                  to="/quiz"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
+                    fontSize: "20px",
+                  }}
+                >
+                  Go Back
                 </Button>
               </div>
             ) : (
