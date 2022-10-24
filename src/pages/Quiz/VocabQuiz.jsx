@@ -5,43 +5,142 @@ import { Link } from "react-router-dom";
 function VocabQuiz() {
   const questions = [
     {
-      id: "1",
-      questionText: "What is the capital of France?",
+      questionText: "desktop",
       answerOptions: [
-        { answerText: "New York", isCorrect: false },
-        { answerText: "London", isCorrect: false },
-        { answerText: "Paris", isCorrect: true },
-        { answerText: "Dublin", isCorrect: false },
+        { id: 1, answerText: "máy tính xách tay", isCorrect: false },
+        { id: 2, answerText: "đĩa CD", isCorrect: false },
+        { id: 3, answerText: "máy tính để bàn", isCorrect: true },
+        { id: 4, answerText: "đĩa mềm", isCorrect: false },
       ],
     },
     {
-      id: "2",
-      questionText: "Who is CEO of Tesla?",
+      id: 2,
+      questionText: "xe hơi",
       answerOptions: [
-        { answerText: "Jeff Bezos", isCorrect: false },
-        { answerText: "Elon Musk", isCorrect: true },
-        { answerText: "Bill Gates", isCorrect: false },
-        { answerText: "Tony Stark", isCorrect: false },
+        { id: 1, answerText: "truck", isCorrect: false },
+        { id: 2, answerText: "car", isCorrect: true },
+        { id: 3, answerText: "bus", isCorrect: false },
+        { id: 4, answerText: "ferry", isCorrect: false },
       ],
     },
     {
-      id: "3",
-      questionText: "The iPhone was created by which company?",
+      id: 3,
+      questionText: "món khai vị",
       answerOptions: [
-        { answerText: "Apple", isCorrect: true },
-        { answerText: "Intel", isCorrect: false },
-        { answerText: "Amazon", isCorrect: false },
-        { answerText: "Microsoft", isCorrect: false },
+        { id: 1, answerText: "appetizer", isCorrect: true },
+        { id: 2, answerText: "pizza", isCorrect: false },
+        { id: 3, answerText: "truck", isCorrect: false },
+        { id: 4, answerText: "diet", isCorrect: false },
       ],
     },
     {
-      id: "3",
-      questionText: "How many Harry Potter books are there?",
+      id: 4,
+      questionText: "musical instrument",
       answerOptions: [
-        { answerText: "1", isCorrect: false },
-        { answerText: "4", isCorrect: false },
-        { answerText: "6", isCorrect: false },
-        { answerText: "7", isCorrect: true },
+        { id: 1, answerText: "xe máy", isCorrect: false },
+        { id: 2, answerText: "khai vị", isCorrect: false },
+        { id: 3, answerText: "sân bay", isCorrect: false },
+        { id: 4, answerText: "nhạc cụ", isCorrect: true },
+      ],
+    },
+    {
+      id: 5,
+      questionText: "nghệ sĩ",
+      answerOptions: [
+        { id: 1, answerText: "drum", isCorrect: false },
+        { id: 2, answerText: "truck", isCorrect: false },
+        { id: 3, answerText: "artist", isCorrect: true },
+        { id: 4, answerText: "floppy disk", isCorrect: false },
+      ],
+    },
+    {
+      id: 6,
+      questionText: "hello",
+      answerOptions: [
+        { id: 1, answerText: "xin chào", isCorrect: true },
+        { id: 2, answerText: "xe buýt", isCorrect: false },
+        { id: 3, answerText: "ăn kiêng", isCorrect: false },
+        { id: 4, answerText: "tạm biệt", isCorrect: false },
+      ],
+    },
+    {
+      id: 7,
+      questionText: "tạm biệt",
+      answerOptions: [
+        { id: 1, answerText: "good morning", isCorrect: false },
+        { id: 2, answerText: "plane", isCorrect: false },
+        { id: 3, answerText: "goodbye", isCorrect: true },
+        { id: 4, answerText: "salad", isCorrect: false },
+      ],
+    },
+    {
+      id: 8,
+      questionText: "người chơi đàn guitar",
+      answerOptions: [
+        { id: 1, answerText: "receptionist", isCorrect: false },
+        { id: 2, answerText: "guitarist", isCorrect: true },
+        { id: 3, answerText: "piano", isCorrect: false },
+        { id: 4, answerText: "laptop", isCorrect: false },
+      ],
+    },
+    {
+      id: 9,
+      questionText: "suitcase",
+      answerOptions: [
+        { id: 1, answerText: "bãi biển", isCorrect: false },
+        { id: 2, answerText: "đàn piano", isCorrect: false },
+        { id: 3, answerText: "khai vị", isCorrect: false },
+        { id: 4, answerText: "vali xách tay", isCorrect: true },
+      ],
+    },
+    {
+      id: 10,
+      questionText: "airport",
+      answerOptions: [
+        { id: 1, answerText: "trạm xe buýt", isCorrect: false },
+        { id: 2, answerText: "sân bay", isCorrect: true },
+        { id: 3, answerText: "đàn ghi-ta", isCorrect: false },
+        { id: 4, answerText: "thuyền", isCorrect: false },
+      ],
+    },
+    {
+      id: 11,
+      questionText: "bãi biển",
+      answerOptions: [
+        { id: 2, answerText: "beach", isCorrect: true },
+        { id: 1, answerText: "airport", isCorrect: false },
+        { id: 3, answerText: "car", isCorrect: false },
+        { id: 4, answerText: "appetizer", isCorrect: false },
+      ],
+    },
+    {
+      id: 12,
+      questionText: "xe đạp",
+      answerOptions: [
+        { id: 1, answerText: "bus", isCorrect: false },
+        { id: 2, answerText: "bicycle", isCorrect: true },
+        { id: 3, answerText: "train", isCorrect: false },
+        { id: 4, answerText: "truck", isCorrect: false },
+      ],
+    },
+    {
+      id: 13,
+      questionText: "ambulance",
+      answerOptions: [
+        { id: 1, answerText: "xe buýt", isCorrect: false },
+        { id: 3, answerText: "xe tải", isCorrect: false },
+        { id: 2, answerText: "xe cứu thương", isCorrect: true },
+        { id: 4, answerText: "trạm xe buýt", isCorrect: false },
+      ],
+    },
+    {
+      id: 14,
+      questionText: "good morning",
+      answerOptions: [
+        { id: 1, answerText: "tạm biệt", isCorrect: false },
+        { id: 3, answerText: "xin chào", isCorrect: false },
+        { id: 4, answerText: "bãi biển", isCorrect: false },
+        { id: 2, answerText: "chào buổi sáng", isCorrect: true },
       ],
     },
   ];
@@ -69,7 +168,7 @@ function VocabQuiz() {
           <div className="container-sm rounded border border-dark p-5">
             {showScore ? (
               <div className="display-5 score-section">
-                You scored {score} out of {questions.length}
+                You scored {score} out of {questions.length} correct
                 <br />
                 <Button
                   className="rounded p-2 mt-3 me-3 fw-bold"
@@ -99,10 +198,8 @@ function VocabQuiz() {
               <>
                 <div className="question-section">
                   <div className="fw-bold h3 question-count mb-2">
-                    <span key={questions.id}>
-                      Question {currentQuestion + 1}
-                    </span>
-                    /{questions.length}
+                    <span>Question {currentQuestion + 1}</span>/
+                    {questions.length}
                   </div>
                   <div className="h4 question-text mb-2">
                     {questions[currentQuestion].questionText}
@@ -112,6 +209,7 @@ function VocabQuiz() {
                   {questions[currentQuestion].answerOptions.map(
                     (answerOption) => (
                       <Button
+                        key={answerOption.id}
                         className="w-100 rounded p-2 mt-2 fw-bold"
                         onClick={() =>
                           handleAnswerOptionClick(answerOption.isCorrect)
