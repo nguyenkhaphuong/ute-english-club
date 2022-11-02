@@ -29,7 +29,7 @@ function Home() {
   TabTitle("Home | UTE English Club");
 
   const btnScrollToTop = () => {
-    document.documentElement.scrollTop = 0;
+    window.scrollTo(0, 0);
   };
 
   return (
