@@ -41,14 +41,19 @@ function About() {
             <span className="fas fa-arrow-up"></span>
           </Button>
           <Row className="border rounded-2 p-4">
-            <Col className="text-center my-auto" sm={3}>
-              <img src={Info} alt="Info" width={"40%"} />
+            <Col className="text-center my-auto" md={3}>
+              <img
+                src={Info}
+                alt="Info"
+                style={{ maxWidth: "45%" }}
+                width={"125px"}
+              />
             </Col>
-            <Col className="mt-4" sm={9}>
+            <Col className="mt-4" md={9}>
               <Row className="h2 fw-bold d-flex justify-content-center">
                 About this website
               </Row>
-              <Row className="d-flex justify-content-center lead">
+              <Row className="d-flex justify-content-center">
                 English is the most popular foreign language which is used by
                 both native and non-native speakers around the world. People use
                 English in many ways such as watching TV shows and movies,
@@ -70,14 +75,19 @@ function About() {
             </Col>
           </Row>
           <Row className="border rounded-2 mt-3 p-4">
-            <Col className="text-center my-auto" sm={3}>
-              <img src={AboutMe} alt="Info" width={"40%"} />
+            <Col className="text-center my-auto" md={3}>
+              <img
+                src={AboutMe}
+                alt="Info"
+                style={{ maxWidth: "40%" }}
+                width={"125px"}
+              />
             </Col>
-            <Col className="mt-4" sm={9}>
+            <Col className="mt-4" md={9}>
               <Row className="h2 fw-bold d-flex justify-content-center">
                 About myself
               </Row>
-              <Row className="d-flex justify-content-center lead">
+              <Row className="d-flex justify-content-center">
                 Hi! My name is Nguyen Kha Phuong, born June 15th, 2000 in Ho Chi
                 Minh City, Viet Nam. I am currently a final-year student at Ho
                 Chi Minh University of Technology and Education (HCMUTE),

@@ -5,39 +5,43 @@ import { Button } from "react-bootstrap";
 function GrammarQuiz() {
   const questions = [
     {
-      questionText: "What is the capital of France?",
+      questionText: "Which one is correct for present perfect tense?",
       answerOptions: [
-        { answerText: "New York", isCorrect: false },
-        { answerText: "London", isCorrect: false },
-        { answerText: "Paris", isCorrect: true },
-        { answerText: "Dublin", isCorrect: false },
+        { id: 1, answerText: "I love you!", isCorrect: false },
+        {
+          id: 2,
+          answerText: "I have been to America since 2016",
+          isCorrect: true,
+        },
+        { id: 3, answerText: "What did you do yesterday?", isCorrect: false },
+        { id: 4, answerText: "Lucky you!", isCorrect: false },
       ],
     },
     {
-      questionText: "Who is CEO of Tesla?",
+      questionText: "Present continous tense",
       answerOptions: [
-        { answerText: "Jeff Bezos", isCorrect: false },
-        { answerText: "Elon Musk", isCorrect: true },
-        { answerText: "Bill Gates", isCorrect: false },
-        { answerText: "Tony Stark", isCorrect: false },
+        { id: 1, answerText: "S + V-ing + O", isCorrect: true },
+        { id: 2, answerText: "S + will V + O", isCorrect: false },
+        { id: 3, answerText: "S + V (past simple) + O", isCorrect: false },
+        { id: 4, answerText: "S + be V (past participle)", isCorrect: false },
       ],
     },
     {
-      questionText: "The iPhone was created by which company?",
+      questionText: "Phuong ______ at the cinema last night",
       answerOptions: [
-        { answerText: "Apple", isCorrect: true },
-        { answerText: "Intel", isCorrect: false },
-        { answerText: "Amazon", isCorrect: false },
-        { answerText: "Microsoft", isCorrect: false },
+        { id: 1, answerText: "be", isCorrect: false },
+        { id: 2, answerText: "will be", isCorrect: false },
+        { id: 3, answerText: "was", isCorrect: true },
+        { id: 4, answerText: "is", isCorrect: false },
       ],
     },
     {
       questionText: "How many Harry Potter books are there?",
       answerOptions: [
-        { answerText: "1", isCorrect: false },
-        { answerText: "4", isCorrect: false },
-        { answerText: "6", isCorrect: false },
-        { answerText: "7", isCorrect: true },
+        { id: 1, answerText: "1", isCorrect: false },
+        { id: 2, answerText: "4", isCorrect: false },
+        { id: 3, answerText: "6", isCorrect: false },
+        { id: 4, answerText: "7", isCorrect: true },
       ],
     },
   ];
@@ -95,19 +99,18 @@ function GrammarQuiz() {
               <>
                 <div className="question-section">
                   <div className="fw-bold h3 question-count mb-2">
-                    <span key={questions.id}>
-                      Question {currentQuestion + 1}
-                    </span>
-                    /{questions.length}
+                    <span>Question {currentQuestion + 1}</span>/
+                    {questions.length}
                   </div>
-                  <div className="h4 question-text mb-2">
+                  <div className="h5 question-text mb-2">
                     {questions[currentQuestion].questionText}
                   </div>
                 </div>
-                <div className="answer-section mt-4">
+                <div className="answer-section mt-2">
                   {questions[currentQuestion].answerOptions.map(
                     (answerOption) => (
                       <Button
+                        key={answerOption.id}
                         className="w-100 rounded p-2 mt-2 fw-bold"
                         onClick={() =>
                           handleAnswerOptionClick(answerOption.isCorrect)

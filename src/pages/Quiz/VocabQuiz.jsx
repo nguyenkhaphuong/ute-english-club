@@ -6,6 +6,7 @@ function VocabQuiz() {
   const questions = [
     {
       questionText: "desktop",
+      image: "https://cdn-icons-png.flaticon.com/512/1865/1865273.png",
       answerOptions: [
         { id: 1, answerText: "máy tính xách tay", isCorrect: false },
         { id: 2, answerText: "đĩa CD", isCorrect: false },
@@ -16,6 +17,7 @@ function VocabQuiz() {
     {
       id: 2,
       questionText: "xe hơi",
+      image: "https://cdn-icons-png.flaticon.com/512/741/741407.png",
       answerOptions: [
         { id: 1, answerText: "truck", isCorrect: false },
         { id: 2, answerText: "car", isCorrect: true },
@@ -26,6 +28,7 @@ function VocabQuiz() {
     {
       id: 3,
       questionText: "món khai vị",
+      image: "https://cdn-icons-png.flaticon.com/512/2558/2558974.png",
       answerOptions: [
         { id: 1, answerText: "appetizer", isCorrect: true },
         { id: 2, answerText: "pizza", isCorrect: false },
@@ -36,6 +39,7 @@ function VocabQuiz() {
     {
       id: 4,
       questionText: "musical instrument",
+      image: "https://cdn-icons-png.flaticon.com/512/4419/4419474.png",
       answerOptions: [
         { id: 1, answerText: "xe máy", isCorrect: false },
         { id: 2, answerText: "khai vị", isCorrect: false },
@@ -46,6 +50,7 @@ function VocabQuiz() {
     {
       id: 5,
       questionText: "nghệ sĩ",
+      image: "https://cdn-icons-png.flaticon.com/512/7417/7417828.png",
       answerOptions: [
         { id: 1, answerText: "drum", isCorrect: false },
         { id: 2, answerText: "truck", isCorrect: false },
@@ -56,6 +61,7 @@ function VocabQuiz() {
     {
       id: 6,
       questionText: "hello",
+      image: "https://cdn-icons-png.flaticon.com/512/5129/5129597.png",
       answerOptions: [
         { id: 1, answerText: "xin chào", isCorrect: true },
         { id: 2, answerText: "xe buýt", isCorrect: false },
@@ -66,6 +72,7 @@ function VocabQuiz() {
     {
       id: 7,
       questionText: "tạm biệt",
+      image: "https://cdn-icons-png.flaticon.com/512/4081/4081653.png",
       answerOptions: [
         { id: 1, answerText: "good morning", isCorrect: false },
         { id: 2, answerText: "plane", isCorrect: false },
@@ -75,7 +82,8 @@ function VocabQuiz() {
     },
     {
       id: 8,
-      questionText: "người chơi đàn guitar",
+      questionText: "nghệ sĩ chơi guitar",
+      image: "https://cdn-icons-png.flaticon.com/512/3048/3048387.png",
       answerOptions: [
         { id: 1, answerText: "receptionist", isCorrect: false },
         { id: 2, answerText: "guitarist", isCorrect: true },
@@ -86,6 +94,7 @@ function VocabQuiz() {
     {
       id: 9,
       questionText: "suitcase",
+      image: "https://cdn-icons-png.flaticon.com/512/1663/1663017.png",
       answerOptions: [
         { id: 1, answerText: "bãi biển", isCorrect: false },
         { id: 2, answerText: "đàn piano", isCorrect: false },
@@ -96,6 +105,7 @@ function VocabQuiz() {
     {
       id: 10,
       questionText: "airport",
+      image: "https://cdn-icons-png.flaticon.com/512/3127/3127367.png",
       answerOptions: [
         { id: 1, answerText: "trạm xe buýt", isCorrect: false },
         { id: 2, answerText: "sân bay", isCorrect: true },
@@ -106,6 +116,7 @@ function VocabQuiz() {
     {
       id: 11,
       questionText: "bãi biển",
+      image: "https://cdn-icons-png.flaticon.com/512/2664/2664650.png",
       answerOptions: [
         { id: 2, answerText: "beach", isCorrect: true },
         { id: 1, answerText: "airport", isCorrect: false },
@@ -116,6 +127,7 @@ function VocabQuiz() {
     {
       id: 12,
       questionText: "xe đạp",
+      image: "https://cdn-icons-png.flaticon.com/512/562/562008.png",
       answerOptions: [
         { id: 1, answerText: "bus", isCorrect: false },
         { id: 2, answerText: "bicycle", isCorrect: true },
@@ -126,6 +138,7 @@ function VocabQuiz() {
     {
       id: 13,
       questionText: "ambulance",
+      image: "https://cdn-icons-png.flaticon.com/512/2869/2869684.png",
       answerOptions: [
         { id: 1, answerText: "xe buýt", isCorrect: false },
         { id: 3, answerText: "xe tải", isCorrect: false },
@@ -136,6 +149,7 @@ function VocabQuiz() {
     {
       id: 14,
       questionText: "good morning",
+      image: "https://cdn-icons-png.flaticon.com/512/6744/6744598.png",
       answerOptions: [
         { id: 1, answerText: "tạm biệt", isCorrect: false },
         { id: 3, answerText: "xin chào", isCorrect: false },
@@ -201,11 +215,19 @@ function VocabQuiz() {
                     <span>Question {currentQuestion + 1}</span>/
                     {questions.length}
                   </div>
-                  <div className="h4 question-text mb-2">
+                  <div className="h5 question-text mb-2">
                     {questions[currentQuestion].questionText}
+                    <br />
+                    <img
+                      className="mx-auto d-block"
+                      src={questions[currentQuestion].image}
+                      alt="Info"
+                      width={"125px"}
+                      style={{ maxWidth: "40%" }}
+                    />
                   </div>
                 </div>
-                <div className="answer-section mt-4">
+                <div className="answer-section mt-2">
                   {questions[currentQuestion].answerOptions.map(
                     (answerOption) => (
                       <Button
