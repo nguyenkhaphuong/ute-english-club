@@ -48,214 +48,170 @@ function Vocabulary() {
         </Button>
         <div className="container-sm">
           <Row className="mt-1 g-4">
-            <Col className="d-flex align-item-stretch" md={6}>
-              <Card style={{ maxWidth: "1200px" }}>
-                <Row className="g-0">
-                  <Col className="m-auto" md={4}>
-                    <Card.Img
-                      className="p-3 mx-auto d-block"
-                      variant="top"
-                      style={{ width: "60%" }}
-                      src="https://cdn-icons-png.flaticon.com/512/3385/3385913.png"
-                    />
-                  </Col>
-                  <Col md={8}>
-                    <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
-                      <Card.Title className="h5 text-center fw-bold">
-                        Greetings
-                      </Card.Title>
-                      <Card.Text className="text-center">
-                        Words for basic greetings
-                      </Card.Text>
-                    </Card.Body>
-                    <Button
-                      as={Link}
-                      to="greetings"
-                      className="container-fluid fw-bold"
-                      style={{
-                        background:
-                          "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
-                      }}
-                    >
-                      Start Learning
-                    </Button>
-                  </Col>
-                </Row>
+            <Col className="d-flex" md={3}>
+              <Card style={{ maxWidth: "100%" }}>
+                <Card.Img
+                  className="p-3 mx-auto d-block"
+                  variant="top"
+                  style={{ width: "60%" }}
+                  src="https://cdn-icons-png.flaticon.com/512/3385/3385913.png"
+                />
+                <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
+                  <Card.Title className="text-center fw-bold">
+                    Greetings
+                  </Card.Title>
+                  <Card.Text className="text-center">
+                    Words for basic greetings
+                  </Card.Text>
+                </Card.Body>
+                <Button
+                  as={Link}
+                  to="greetings"
+                  className="container-fluid fw-bold"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
+                  }}
+                >
+                  Start Learning
+                </Button>
               </Card>
             </Col>
-            <Col className="d-flex align-item-stretch" md={6}>
-              <Card style={{ maxWidth: "900px" }}>
-                <Row className="g-0">
-                  <Col className="m-auto" md={4}>
-                    <Card.Img
-                      className="p-3 m-auto d-block"
-                      variant="top"
-                      style={{ width: "60%" }}
-                      src={TransportationIcon}
-                    />
-                  </Col>
-                  <Col md={8}>
-                    <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
-                      <Card.Title className="h5 text-center fw-bold">
-                        Transportation
-                      </Card.Title>
-                      <Card.Text className="text-center">
-                        Words for transportation
-                      </Card.Text>
-                    </Card.Body>
-                    <Button
-                      as={Link}
-                      to="transportation"
-                      className="container-fluid fw-bold"
-                      style={{
-                        background:
-                          "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
-                      }}
-                    >
-                      Start Learning
-                    </Button>
-                  </Col>
-                </Row>
+            <Col className="d-flex" md={3}>
+              <Card style={{ maxWidth: "100%" }}>
+                <Card.Img
+                  className="p-3 m-auto d-block"
+                  variant="top"
+                  style={{ width: "60%" }}
+                  src={TransportationIcon}
+                />
+                <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
+                  <Card.Title className="text-center fw-bold">
+                    Transportation
+                  </Card.Title>
+                  <Card.Text className="text-center">
+                    Words for transportation
+                  </Card.Text>
+                </Card.Body>
+                <Button
+                  as={Link}
+                  to="transportation"
+                  className="container-fluid fw-bold"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
+                  }}
+                >
+                  Start Learning
+                </Button>
               </Card>
             </Col>
-            <Col className="d-flex align-item-stretch" md={6}>
-              <Card style={{ maxWidth: "900px" }}>
-                <Row className="g-0">
-                  <Col className="m-auto" md={4}>
-                    <Card.Img
-                      className="p-3 m-auto d-block"
-                      variant="top"
-                      style={{ width: "60%" }}
-                      src={ComputerIcon}
-                    />
-                  </Col>
-                  <Col md={8}>
-                    <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
-                      <Card.Title className="h5 text-center fw-bold">
-                        Computers
-                      </Card.Title>
-                      <Card.Text className="text-center">
-                        Words for computers
-                      </Card.Text>
-                    </Card.Body>
-                    <Button
-                      as={Link}
-                      to="computers"
-                      className="container-fluid fw-bold"
-                      style={{
-                        background:
-                          "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
-                      }}
-                    >
-                      Start Learning
-                    </Button>
-                  </Col>
-                </Row>
+            <Col className="d-flex" md={3}>
+              <Card style={{ maxWidth: "100%" }}>
+                <Card.Img
+                  className="p-3 m-auto d-block"
+                  variant="top"
+                  style={{ width: "60%" }}
+                  src={ComputerIcon}
+                />
+                <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
+                  <Card.Title className="text-center fw-bold">
+                    Computers
+                  </Card.Title>
+                  <Card.Text className="text-center">
+                    Words for computers
+                  </Card.Text>
+                </Card.Body>
+                <Button
+                  as={Link}
+                  to="computers"
+                  className="container-fluid fw-bold"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
+                  }}
+                >
+                  Start Learning
+                </Button>
               </Card>
             </Col>
-            <Col className="d-flex align-item-stretch" md={6}>
-              <Card style={{ maxWidth: "1200px" }}>
-                <Row className="g-0">
-                  <Col className="m-auto" md={4}>
-                    <Card.Img
-                      className="p-3 mx-auto d-block"
-                      variant="top"
-                      style={{ width: "60%" }}
-                      src={TravelIcon}
-                    />
-                  </Col>
-                  <Col md={8}>
-                    <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
-                      <Card.Title className="h5 text-center fw-bold">
-                        Travelling
-                      </Card.Title>
-                      <Card.Text className="text-center">
-                        Words for travelling
-                      </Card.Text>
-                    </Card.Body>
-                    <Button
-                      as={Link}
-                      to="travelling"
-                      className="container-fluid fw-bold"
-                      style={{
-                        background:
-                          "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
-                      }}
-                    >
-                      Start Learning
-                    </Button>
-                  </Col>
-                </Row>
+            <Col className="d-flex" md={3}>
+              <Card style={{ maxWidth: "100%" }}>
+                <Card.Img
+                  className="p-3 mx-auto d-block"
+                  variant="top"
+                  style={{ width: "60%" }}
+                  src={TravelIcon}
+                />
+                <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
+                  <Card.Title className="text-center fw-bold">
+                    Travelling
+                  </Card.Title>
+                  <Card.Text className="text-center">
+                    Words for travelling
+                  </Card.Text>
+                </Card.Body>
+                <Button
+                  as={Link}
+                  to="travelling"
+                  className="container-fluid fw-bold"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
+                  }}
+                >
+                  Start Learning
+                </Button>
               </Card>
             </Col>
-            <Col className="d-flex align-item-stretch" md={6}>
-              <Card style={{ maxWidth: "1200px" }}>
-                <Row className="g-0">
-                  <Col className="m-auto" md={4}>
-                    <Card.Img
-                      className="p-3 mx-auto d-block"
-                      variant="top"
-                      style={{ width: "60%" }}
-                      src={FoodIcon}
-                    />
-                  </Col>
-                  <Col md={8}>
-                    <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
-                      <Card.Title className="h5 text-center fw-bold">
-                        Food
-                      </Card.Title>
-                      <Card.Text className="text-center">
-                        Words for food
-                      </Card.Text>
-                    </Card.Body>
-                    <Button
-                      as={Link}
-                      to="food"
-                      className="container-fluid fw-bold"
-                      style={{
-                        background:
-                          "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
-                      }}
-                    >
-                      Start Learning
-                    </Button>
-                  </Col>
-                </Row>
+            <Col className="d-flex" md={3}>
+              <Card style={{ maxWidth: "100%" }}>
+                <Card.Img
+                  className="p-3 mx-auto d-block"
+                  variant="top"
+                  style={{ width: "60%" }}
+                  src={FoodIcon}
+                />
+                <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
+                  <Card.Title className="text-center fw-bold">Food</Card.Title>
+                  <Card.Text className="text-center">Words for food</Card.Text>
+                </Card.Body>
+                <Button
+                  as={Link}
+                  to="food"
+                  className="container-fluid fw-bold"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
+                  }}
+                >
+                  Start Learning
+                </Button>
               </Card>
             </Col>
-            <Col className="d-flex align-item-stretch" md={6}>
-              <Card style={{ maxWidth: "1200px" }}>
-                <Row className="g-0">
-                  <Col className="m-auto" md={4}>
-                    <Card.Img
-                      className="p-3 mx-auto d-block"
-                      variant="top"
-                      style={{ width: "60%" }}
-                      src="https://cdn-icons-png.flaticon.com/512/2995/2995101.png"
-                    />
-                  </Col>
-                  <Col md={8}>
-                    <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
-                      <Card.Title className="h5 text-center fw-bold">
-                        Music
-                      </Card.Title>
-                      <Card.Text className="text-center">
-                        Words for music
-                      </Card.Text>
-                    </Card.Body>
-                    <Button
-                      as={Link}
-                      to="music"
-                      className="container-fluid fw-bold"
-                      style={{
-                        background:
-                          "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
-                      }}
-                    >
-                      Start Learning
-                    </Button>
-                  </Col>
-                </Row>
+            <Col className="d-flex" md={3}>
+              <Card style={{ maxWidth: "100%" }}>
+                <Card.Img
+                  className="p-3 mx-auto d-block"
+                  variant="top"
+                  style={{ width: "60%" }}
+                  src="https://cdn-icons-png.flaticon.com/512/2995/2995101.png"
+                />
+                <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
+                  <Card.Title className="text-center fw-bold">Music</Card.Title>
+                  <Card.Text className="text-center">Words for music</Card.Text>
+                </Card.Body>
+                <Button
+                  as={Link}
+                  to="music"
+                  className="container-fluid fw-bold"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
+                  }}
+                >
+                  Start Learning
+                </Button>
               </Card>
             </Col>
           </Row>

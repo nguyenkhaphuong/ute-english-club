@@ -39,9 +39,8 @@ function PresentSimple() {
           <span className="fas fa-arrow-up"></span>
         </Button>
         <div className="container-sm lead">
-          The present simple tense is the most basic grammar tense in English
-          that is used to to give instructions, or to express habits, reported
-          truths, etc.
+          The present simple tense is used to give instructions, or to express
+          habits, reported truths, etc.
         </div>
         <br />
         <div className="container-sm mt-2">
@@ -108,25 +107,25 @@ function PresentSimple() {
         <div className="container-sm mt-2">
           <h2 className="fw-bold">Exercises</h2>
           <p>
-            1. I _________ to school. <strong>(go)</strong>
+            1. I _________ to school.<strong>(go)</strong>
           </p>
           <p>
-            2. They _________ games. <strong>(not play)</strong>
+            2. They _________ games.<strong>(not play)</strong>
           </p>
           <p>
-            3. John _________ go to work. <strong>(not go)</strong>
+            3. John _________ go to work.<strong>(not go)</strong>
           </p>
           <p>
-            4. ______ you _______ basketball? <strong>(like)</strong>
+            4. ______ you _______ basketball?<strong>(like)</strong>
           </p>
           <p>
-            5. She _________ jogging. <strong>(not go)</strong>
+            5. She _________ jogging.<strong>(not go)</strong>
           </p>
           <p>
-            6. I _________ TV shows. <strong>(not watch)</strong>
+            6. I _________ TV shows.<strong>(not watch)</strong>
           </p>
           <p>
-            7. We _________ going to the city. <strong>(enjoy)</strong>
+            7. We _________ going to the city.<strong>(enjoy)</strong>
           </p>
         </div>
       </div>

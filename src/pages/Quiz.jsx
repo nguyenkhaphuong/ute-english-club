@@ -43,7 +43,7 @@ function Quiz() {
         <div className="container-sm">
           <Row className="mt-1 gy-4">
             <Col md={6}>
-              <Card border="dark" style={{ maxWidth: "100%" }}>
+              <Card style={{ maxWidth: "100%" }}>
                 <Card.Img
                   className="p-3 mx-auto d-block"
                   variant="top"
@@ -51,7 +51,7 @@ function Quiz() {
                   src={VocabularyQuiz}
                 />
                 <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
-                  <Card.Title className="h5 text-center fw-bold">
+                  <Card.Title className="text-center fw-bold">
                     Vocabulary
                   </Card.Title>
                   <Card.Text className="text-center">
@@ -73,7 +73,7 @@ function Quiz() {
             </Col>
 
             <Col md={6}>
-              <Card border="dark" style={{ maxWidth: "100%" }}>
+              <Card style={{ maxWidth: "100%" }}>
                 <Card.Img
                   className="p-3 mx-auto d-block"
                   variant="top"
@@ -81,7 +81,7 @@ function Quiz() {
                   src={GrammarQuiz}
                 />
                 <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
-                  <Card.Title className="h5 text-center fw-bold">
+                  <Card.Title className="text-center fw-bold">
                     Grammar
                   </Card.Title>
                   <Card.Text className="text-center">

@@ -13,9 +13,9 @@ function PresentContinous() {
           backgroundColor: "#dbdbec",
         }}
       >
-        <h1 className="container-sm display-5 fw-bold">Present Simple</h1>
+        <h1 className="container-sm display-5 fw-bold">Present Continous</h1>
         <p className="container-sm">
-          Learn the basics of the present simple and practice using it
+          Learn the basics of the present continous and practice using it
         </p>
       </div>
       <div className="section mt-3 px-4">
@@ -35,70 +35,94 @@ function PresentContinous() {
           <span className="fas fa-arrow-up"></span>
         </Button>
         <div className="container-sm lead">
-          The present simple tense is the most basic grammar tense in English
-          that is used to to give instructions, or to express habits, reported
-          truths, etc.
+          The present continous tense is used to talk about regular actions or
+          activities that are happening at the moment of speaking. It can also
+          be used for future plans.
         </div>
         <br />
         <div className="container-sm mt-2">
           <h2 className="fw-bold">Basic Form</h2>
-          The basic form of present simple tense:
-          <div
-            style={{ backgroundColor: "#dbdbec" }}
-            className="my-3 text-center p-3 w-25 rounded border h3 fw-bold"
-          >
-            S + V + Object
-          </div>
-          <strong>For example:</strong>{" "}
-          <i>
-            I <strong>live</strong> in Ho Chi Minh city.
-          </i>
-          <div className="mt-3 fs-lg">
-            But for he/she/it, we add an <i className="fw-bold">-s</i> :
-            <br />
-            <div className="mt-3">
-              <strong>For example:</strong>{" "}
-              <i>
-                She <strong>works</strong> in the office.
-              </i>
-            </div>
-          </div>
-        </div>
-        <br />
-        <div className="container-sm mt-2">
-          <h2 className="fw-bold">Negative form</h2>
-          The negative form of present simple tense:
+          The basic form of present continous tense:
           <div
             style={{ backgroundColor: "#dbdbec" }}
             className="my-3 text-center p-3 w-50 rounded border h3 fw-bold"
           >
-            S + don't/doesn't + V + Object
+            S + be (am/is/are) + V-ing + Object
+          </div>
+          <strong>For example:</strong>{" "}
+          <i>
+            I <strong>am studying</strong> at New York University.
+            <br />
+            She <strong>is going</strong> out for dinner with her friends.
+            <br />
+            They <strong>are watching</strong> a movie.
+          </i>
+        </div>
+        <br />
+        <div className="container-sm mt-2">
+          <h2 className="fw-bold">Negative form</h2>
+          The negative form of present continous tense:
+          <div
+            style={{ backgroundColor: "#dbdbec" }}
+            className="my-3 text-center p-3 w-50 rounded border h3 fw-bold"
+          >
+            S + (am/is/are) not + V-ing + Object
           </div>
           <strong>For example: </strong>
           <i>
-            I <strong>don't live</strong> in Ho Chi Minh city.
+            I <strong>am not working</strong> at the moment.
             <br />
-            She <strong>doesn't work</strong> in Vietnam.
+            She <strong>is not living</strong> with us anymore.
+            <br />
+            We <strong>are not moving</strong> for America.
           </i>
         </div>
         <br />
         <div className="container-sm mt-2">
           <h2 className="fw-bold">Interrogative Form</h2>
-          The Interrogative form of present simple tense:
+          The Interrogative form of present continous tense:
           <div
             style={{ backgroundColor: "#dbdbec" }}
             className="my-3 text-center p-3 w-50 rounded border h3 fw-bold"
           >
-            Do/Does + S + V + Object ?
+            (Am/Is/Are) + S + V-ing + Object ?
           </div>
-          <strong>For example:</strong>{" "}
+          <strong>For example: </strong>
           <i>
-            <strong>Do</strong> you live in Ho Chi Minh city?
+            <strong>Are</strong> you <strong>coming back</strong> to Ho Chi Minh
+            city?
           </i>
           <br />
           <i>
-            <strong>Does</strong> he play soccer?
+            <strong>Is</strong> he <strong>playing</strong> video games?
           </i>
+        </div>
+        <br />
+        <div className="container-sm mt-2">
+          <h2 className="fw-bold">Exercises</h2>
+          <p>
+            1. When I _____ young. I _________ playing computer games.{" "}
+            <strong>(be/like)</strong>
+          </p>
+          <p>
+            2. They _________ games. <strong>(not play)</strong>
+          </p>
+          <p>
+            3. Many years ago, people _______ to work on foot.{" "}
+            <strong>(go)</strong>
+          </p>
+          <p>
+            4. ______ you _______ the soccer match? <strong>(watch)</strong>
+          </p>
+          <p>
+            5. She _________ jogging. <strong>(not go)</strong>
+          </p>
+          <p>
+            6. I _________ TV shows last week. <strong>(watch)</strong>
+          </p>
+          <p>
+            7. We _________ at the hotel in Nha Trang. <strong>(be)</strong>
+          </p>
         </div>
       </div>
     </>

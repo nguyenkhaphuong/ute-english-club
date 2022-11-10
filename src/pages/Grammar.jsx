@@ -50,7 +50,7 @@ function Grammar() {
         <div className="container-sm">
           <Row className="mt-1 g-4">
             <Col className="d-flex" md={3}>
-              <Card border="dark" style={{ maxWidth: "100%" }}>
+              <Card style={{ maxWidth: "100%" }}>
                 <Card.Img
                   className="p-3 mx-auto d-block"
                   variant="top"
@@ -80,7 +80,7 @@ function Grammar() {
             </Col>
 
             <Col className="d-flex" md={3}>
-              <Card border="dark" style={{ maxWidth: "100%" }}>
+              <Card style={{ maxWidth: "100%" }}>
                 <Card.Img
                   className="p-3 mx-auto d-block"
                   variant="top"
@@ -110,7 +110,7 @@ function Grammar() {
             </Col>
 
             <Col className="d-flex" md={3}>
-              <Card border="dark" style={{ maxWidth: "100%" }}>
+              <Card style={{ maxWidth: "100%" }}>
                 <Card.Img
                   className="p-3 mx-auto d-block"
                   variant="top"
@@ -140,7 +140,7 @@ function Grammar() {
             </Col>
 
             <Col className="d-flex" md={3}>
-              <Card border="dark" style={{ maxWidth: "100%" }}>
+              <Card style={{ maxWidth: "100%" }}>
                 <Card.Img
                   className="p-3 mx-auto d-block"
                   variant="top"
@@ -170,7 +170,7 @@ function Grammar() {
             </Col>
 
             <Col className="d-flex" md={3}>
-              <Card border="dark" style={{ maxWidth: "100%" }}>
+              <Card style={{ maxWidth: "100%" }}>
                 <Card.Img
                   className="p-3 mx-auto d-block"
                   variant="top"

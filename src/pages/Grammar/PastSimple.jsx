@@ -35,7 +35,7 @@ function PastSimple() {
           <span className="fas fa-arrow-up"></span>
         </Button>
         <div className="container-sm lead">
-          The past simple tense is used to to talk about events, action that
+          The past simple tense is used to talk about events, action that
           occured and was completed at a particular time in the past.
         </div>
         <br />
@@ -95,27 +95,27 @@ function PastSimple() {
         <div className="container-sm mt-2">
           <h2 className="fw-bold">Exercises</h2>
           <p>
-            1. When I _____ young. I _________ playing computer games.{" "}
+            1. When I _____ young, I _________ playing computer games.
             <strong>(be/like)</strong>
           </p>
           <p>
-            2. They _________ games. <strong>(not play)</strong>
+            2. They _________ games.<strong>(not play)</strong>
           </p>
           <p>
-            3. Many years ago, people _______ to work on foot.{" "}
+            3. Many years ago, people _______ to work on foot.
             <strong>(go)</strong>
           </p>
           <p>
-            4. ______ you _______ the soccer match? <strong>(watch)</strong>
+            4. ______ you _______ the soccer match?<strong>(watch)</strong>
           </p>
           <p>
-            5. She _________ jogging. <strong>(not go)</strong>
+            5. She _________ jogging.<strong>(not go)</strong>
           </p>
           <p>
-            6. I _________ TV shows last week. <strong>(watch)</strong>
+            6. I _________ TV shows last week.<strong>(watch)</strong>
           </p>
           <p>
-            7. We _________ at the hotel in Nha Trang. <strong>(be)</strong>
+            7. We _________ at the hotel in Nha Trang.<strong>(be)</strong>
           </p>
         </div>
       </div>
