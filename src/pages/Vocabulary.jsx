@@ -57,10 +57,10 @@ function Vocabulary() {
                   src="https://cdn-icons-png.flaticon.com/512/3385/3385913.png"
                 />
                 <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
-                  <Card.Title className="text-center fw-bold">
+                  <Card.Title className="h6 text-center fw-bold">
                     Greetings
                   </Card.Title>
-                  <Card.Text className="text-center">
+                  <Card.Text className="h6 text-center">
                     Words for basic greetings
                   </Card.Text>
                 </Card.Body>
@@ -86,10 +86,10 @@ function Vocabulary() {
                   src={TransportationIcon}
                 />
                 <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
-                  <Card.Title className="text-center fw-bold">
+                  <Card.Title className="h6 text-center fw-bold">
                     Transportation
                   </Card.Title>
-                  <Card.Text className="text-center">
+                  <Card.Text className="h6 text-center">
                     Words for transportation
                   </Card.Text>
                 </Card.Body>
@@ -115,10 +115,10 @@ function Vocabulary() {
                   src={ComputerIcon}
                 />
                 <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
-                  <Card.Title className="text-center fw-bold">
+                  <Card.Title className="h6 text-center fw-bold">
                     Computers
                   </Card.Title>
-                  <Card.Text className="text-center">
+                  <Card.Text className="h6 text-center">
                     Words for computers
                   </Card.Text>
                 </Card.Body>
@@ -144,10 +144,10 @@ function Vocabulary() {
                   src={TravelIcon}
                 />
                 <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
-                  <Card.Title className="text-center fw-bold">
+                  <Card.Title className="h6 text-center fw-bold">
                     Travelling
                   </Card.Title>
-                  <Card.Text className="text-center">
+                  <Card.Text className="h6 text-center">
                     Words for travelling
                   </Card.Text>
                 </Card.Body>
@@ -173,8 +173,12 @@ function Vocabulary() {
                   src={FoodIcon}
                 />
                 <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
-                  <Card.Title className="text-center fw-bold">Food</Card.Title>
-                  <Card.Text className="text-center">Words for food</Card.Text>
+                  <Card.Title className="h6 text-center fw-bold">
+                    Food
+                  </Card.Title>
+                  <Card.Text className="h6 text-center">
+                    Words for food
+                  </Card.Text>
                 </Card.Body>
                 <Button
                   as={Link}
@@ -198,8 +202,12 @@ function Vocabulary() {
                   src="https://cdn-icons-png.flaticon.com/512/2995/2995101.png"
                 />
                 <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
-                  <Card.Title className="text-center fw-bold">Music</Card.Title>
-                  <Card.Text className="text-center">Words for music</Card.Text>
+                  <Card.Title className="h6 text-center fw-bold">
+                    Music
+                  </Card.Title>
+                  <Card.Text className="h6 text-center">
+                    Words for music
+                  </Card.Text>
                 </Card.Body>
                 <Button
                   as={Link}

@@ -58,10 +58,10 @@ function Grammar() {
                   src={PresentSimple}
                 />
                 <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
-                  <Card.Title className="h5 text-center fw-bold">
+                  <Card.Title className="h6 text-center fw-bold">
                     Present Simple
                   </Card.Title>
-                  <Card.Text className="text-center">
+                  <Card.Text className="h6 text-center">
                     Present Simple Tense
                   </Card.Text>
                 </Card.Body>
@@ -88,10 +88,10 @@ function Grammar() {
                   src={PastSimple}
                 />
                 <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
-                  <Card.Title className="h5 text-center fw-bold">
+                  <Card.Title className="h6 text-center fw-bold">
                     Past Simple
                   </Card.Title>
-                  <Card.Text className="text-center">
+                  <Card.Text className="h6 text-center">
                     Past Simple Tense
                   </Card.Text>
                 </Card.Body>
@@ -118,10 +118,10 @@ function Grammar() {
                   src={PresentContinous}
                 />
                 <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
-                  <Card.Title className="h5 text-center fw-bold">
+                  <Card.Title className="h6 text-center fw-bold">
                     Present Continous
                   </Card.Title>
-                  <Card.Text className="text-center">
+                  <Card.Text className="h6 text-center">
                     Present Continous Tense
                   </Card.Text>
                 </Card.Body>
@@ -148,10 +148,10 @@ function Grammar() {
                   src={PresentPerfect}
                 />
                 <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
-                  <Card.Title className="h5 text-center fw-bold">
+                  <Card.Title className="h6 text-center fw-bold">
                     Present Perfect
                   </Card.Title>
-                  <Card.Text className="text-center">
+                  <Card.Text className="h6 text-center">
                     Present Perfect Tense
                   </Card.Text>
                 </Card.Body>
@@ -178,10 +178,10 @@ function Grammar() {
                   src={IrregularVerbs}
                 />
                 <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
-                  <Card.Title className="h5 text-center fw-bold">
+                  <Card.Title className="h6 text-center fw-bold">
                     Irregular Verbs
                   </Card.Title>
-                  <Card.Text className="text-center">
+                  <Card.Text className="h6 text-center">
                     Here are the common irregular verbs
                   </Card.Text>
                 </Card.Body>
