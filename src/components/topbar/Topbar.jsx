@@ -24,6 +24,9 @@ function topbar() {
             <Nav.Link as={Link} to="/grammar">
               <strong>Grammar</strong>
             </Nav.Link>
+            <Nav.Link as={Link} to="/irregularverbs">
+              <strong>Irregular Verbs</strong>
+            </Nav.Link>
             <Nav.Link as={Link} to="/quiz">
               <strong>Quiz</strong>
             </Nav.Link>
