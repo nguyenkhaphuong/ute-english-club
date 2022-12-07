@@ -1,10 +1,6 @@
 import React from "react";
 import { Button, Row, Col, Card } from "react-bootstrap";
 
-//import quizzes images
-import VocabularyQuiz from "../images/dictionary.png";
-import GrammarQuiz from "../images/grammar.png";
-
 import { TabTitle } from "../utils/GeneralFunctions";
 import { Link } from "react-router-dom";
 
@@ -18,7 +14,7 @@ function Quiz() {
       <div
         className="p-4"
         style={{
-          backgroundImage: 'url("src/images/quiz.jpg")',
+          backgroundColor: "#dbdbec",
         }}
       >
         <h1 className="container-sm display-5 fw-bold">Quiz</h1>
@@ -43,12 +39,12 @@ function Quiz() {
         <div className="container-sm">
           <Row className="mt-1 gy-4">
             <Col md={6}>
-              <Card style={{ maxWidth: "100%" }}>
+              <Card className="shadow" style={{ maxWidth: "100%" }}>
                 <Card.Img
                   className="p-3 mx-auto d-block"
                   variant="top"
                   style={{ width: "30%" }}
-                  src={VocabularyQuiz}
+                  src="https://cdn-icons-png.flaticon.com/512/1902/1902654.png"
                 />
                 <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
                   <Card.Title className="text-center fw-bold">
@@ -73,12 +69,12 @@ function Quiz() {
             </Col>
 
             <Col md={6}>
-              <Card style={{ maxWidth: "100%" }}>
+              <Card className="shadow" style={{ maxWidth: "100%" }}>
                 <Card.Img
                   className="p-3 mx-auto d-block"
                   variant="top"
                   style={{ width: "30%" }}
-                  src={GrammarQuiz}
+                  src="https://cdn-icons-png.flaticon.com/512/6091/6091117.png"
                 />
                 <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
                   <Card.Title className="text-center fw-bold">

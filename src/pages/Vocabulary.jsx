@@ -1,14 +1,11 @@
 import React from "react";
-import { Button, Row, Col, Card } from "react-bootstrap";
+import { Button, Accordion, Table } from "react-bootstrap";
 
-import TransportationIcon from "../images/transportation.png";
-import ComputerIcon from "../images/desktop.png";
-import TravelIcon from "../images/travel.png";
-import FoodIcon from "../images/food.png";
+import vocabulary from "../database/vocabulary.json";
 
 import { TabTitle } from "../utils/GeneralFunctions";
 
-import { Link } from "react-router-dom";
+import { Howl } from "howler";
 
 function Vocabulary() {
   TabTitle("Vocabulary | UTE English Club");
@@ -17,12 +14,20 @@ function Vocabulary() {
     window.scrollTo(0, 0);
   };
 
+  const SoundPlay = (src) => {
+    const sound = new Howl({
+      src,
+      html5: true,
+    });
+    sound.play();
+  };
+
   return (
     <>
       <div
         className="p-4"
         style={{
-          backgroundImage: 'url("src/images/vocabulary.jpg")',
+          backgroundColor: "#dbdbec",
         }}
       >
         <h1 className="container-sm display-5 fw-bold">Vocabulary</h1>
@@ -47,182 +52,78 @@ function Vocabulary() {
           <span className="fas fa-arrow-up"></span>
         </Button>
         <div className="container-sm">
-          <Row className="mt-1 g-4">
-            <Col className="d-flex" md={3}>
-              <Card style={{ maxWidth: "100%" }}>
-                <Card.Img
-                  className="p-3 mx-auto d-block"
-                  variant="top"
-                  style={{ width: "60%" }}
-                  src="https://cdn-icons-png.flaticon.com/512/3385/3385913.png"
-                />
-                <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
-                  <Card.Title className="h6 text-center fw-bold">
-                    Greetings
-                  </Card.Title>
-                  <Card.Text className="h6 text-center">
-                    Words for basic greetings
-                  </Card.Text>
-                </Card.Body>
-                <Button
-                  as={Link}
-                  to="greetings"
-                  className="container-fluid fw-bold"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
-                  }}
-                >
-                  Start Learning
-                </Button>
-              </Card>
-            </Col>
-            <Col className="d-flex" md={3}>
-              <Card style={{ maxWidth: "100%" }}>
-                <Card.Img
-                  className="p-3 m-auto d-block"
-                  variant="top"
-                  style={{ width: "60%" }}
-                  src={TransportationIcon}
-                />
-                <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
-                  <Card.Title className="h6 text-center fw-bold">
-                    Transportation
-                  </Card.Title>
-                  <Card.Text className="h6 text-center">
-                    Words for transportation
-                  </Card.Text>
-                </Card.Body>
-                <Button
-                  as={Link}
-                  to="transportation"
-                  className="container-fluid fw-bold"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
-                  }}
-                >
-                  Start Learning
-                </Button>
-              </Card>
-            </Col>
-            <Col className="d-flex" md={3}>
-              <Card style={{ maxWidth: "100%" }}>
-                <Card.Img
-                  className="p-3 m-auto d-block"
-                  variant="top"
-                  style={{ width: "60%" }}
-                  src={ComputerIcon}
-                />
-                <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
-                  <Card.Title className="h6 text-center fw-bold">
-                    Computers
-                  </Card.Title>
-                  <Card.Text className="h6 text-center">
-                    Words for computers
-                  </Card.Text>
-                </Card.Body>
-                <Button
-                  as={Link}
-                  to="computers"
-                  className="container-fluid fw-bold"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
-                  }}
-                >
-                  Start Learning
-                </Button>
-              </Card>
-            </Col>
-            <Col className="d-flex" md={3}>
-              <Card style={{ maxWidth: "100%" }}>
-                <Card.Img
-                  className="p-3 mx-auto d-block"
-                  variant="top"
-                  style={{ width: "60%" }}
-                  src={TravelIcon}
-                />
-                <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
-                  <Card.Title className="h6 text-center fw-bold">
-                    Travelling
-                  </Card.Title>
-                  <Card.Text className="h6 text-center">
-                    Words for travelling
-                  </Card.Text>
-                </Card.Body>
-                <Button
-                  as={Link}
-                  to="travelling"
-                  className="container-fluid fw-bold"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
-                  }}
-                >
-                  Start Learning
-                </Button>
-              </Card>
-            </Col>
-            <Col className="d-flex" md={3}>
-              <Card style={{ maxWidth: "100%" }}>
-                <Card.Img
-                  className="p-3 mx-auto d-block"
-                  variant="top"
-                  style={{ width: "60%" }}
-                  src={FoodIcon}
-                />
-                <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
-                  <Card.Title className="h6 text-center fw-bold">
-                    Food
-                  </Card.Title>
-                  <Card.Text className="h6 text-center">
-                    Words for food
-                  </Card.Text>
-                </Card.Body>
-                <Button
-                  as={Link}
-                  to="food"
-                  className="container-fluid fw-bold"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
-                  }}
-                >
-                  Start Learning
-                </Button>
-              </Card>
-            </Col>
-            <Col className="d-flex" md={3}>
-              <Card style={{ maxWidth: "100%" }}>
-                <Card.Img
-                  className="p-3 mx-auto d-block"
-                  variant="top"
-                  style={{ width: "60%" }}
-                  src="https://cdn-icons-png.flaticon.com/512/2995/2995101.png"
-                />
-                <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
-                  <Card.Title className="h6 text-center fw-bold">
-                    Music
-                  </Card.Title>
-                  <Card.Text className="h6 text-center">
-                    Words for music
-                  </Card.Text>
-                </Card.Body>
-                <Button
-                  as={Link}
-                  to="music"
-                  className="container-fluid fw-bold"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
-                  }}
-                >
-                  Start Learning
-                </Button>
-              </Card>
-            </Col>
-          </Row>
+          <Accordion>
+            {vocabulary.map((vocab) => {
+              return (
+                <div key={vocab.id}>
+                  <Accordion.Item className="shadow p-2" eventKey={vocab.id}>
+                    <Accordion.Header>
+                      <img
+                        style={{ width: "2em", marginRight: "1.2em" }}
+                        src={vocab.image}
+                        alt={vocab.title}
+                      />
+                      <h5 className="fw-bold">{vocab.title}</h5>
+                    </Accordion.Header>
+                    <Accordion.Body>
+                      <Table striped bordered hover responsive="sm">
+                        <thead
+                          style={{
+                            background:
+                              "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
+                            color: "white",
+                          }}
+                        >
+                          <tr>
+                            <th>Words</th>
+                            <th></th>
+                            <th>Images</th>
+                            <th>Phonetics</th>
+                            <th>Vietnamese Translation</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {vocab.words &&
+                            vocab.words?.map((word) => {
+                              return (
+                                <tr key={word.id}>
+                                  <td>{word.word}</td>
+                                  <td className="text-center">
+                                    <Button
+                                      className="rounded-1"
+                                      style={{
+                                        background:
+                                          "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
+                                      }}
+                                      onClick={() => SoundPlay(word.audio)}
+                                    >
+                                      <span className="fa fa-volume-up"></span>
+                                    </Button>
+                                  </td>
+                                  <td>
+                                    <img
+                                      className="mx-auto d-block"
+                                      src={word.image}
+                                      style={{
+                                        width: "2.5em",
+                                        maxWidth: "8em",
+                                      }}
+                                      alt="Transport"
+                                    />
+                                  </td>
+                                  <td>{word.phonetic}</td>
+                                  <td>{word.translation}</td>
+                                </tr>
+                              );
+                            })}
+                        </tbody>
+                      </Table>
+                    </Accordion.Body>
+                  </Accordion.Item>
+                </div>
+              );
+            })}
+          </Accordion>
         </div>
       </div>
     </>

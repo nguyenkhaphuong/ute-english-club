@@ -1,15 +1,9 @@
 import React from "react";
-import { Button, Row, Col, Card } from "react-bootstrap";
+import { Button, Row, Accordion } from "react-bootstrap";
 
-import PresentSimple from "../images/presentsimple.png";
-import PresentContinous from "../images/presentcontinous.png";
-import PastSimple from "../images/pastsimple.png";
-import PresentPerfect from "../images/presentperfect.png";
-import IrregularVerbs from "../images/irregularverbs.png";
+import grammarData from "../database/grammar.json";
 
 import { TabTitle } from "../utils/GeneralFunctions";
-
-import { Link } from "react-router-dom";
 
 function Grammar() {
   TabTitle("Grammar | UTE English Club");
@@ -23,7 +17,7 @@ function Grammar() {
       <div
         className="p-4"
         style={{
-          backgroundImage: 'url("src/images/grammar.jpg")',
+          backgroundColor: "#dbdbec",
         }}
       >
         <h1 className="container-sm display-5 fw-bold">Grammar</h1>
@@ -48,157 +42,76 @@ function Grammar() {
           <span className="fas fa-arrow-up"></span>
         </Button>
         <div className="container-sm">
-          <Row className="mt-1 g-4">
-            <Col className="d-flex" md={3}>
-              <Card style={{ maxWidth: "100%" }}>
-                <Card.Img
-                  className="p-3 mx-auto d-block"
-                  variant="top"
-                  style={{ width: "60%" }}
-                  src={PresentSimple}
-                />
-                <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
-                  <Card.Title className="h6 text-center fw-bold">
-                    Present Simple
-                  </Card.Title>
-                  <Card.Text className="h6 text-center">
-                    Present Simple Tense
-                  </Card.Text>
-                </Card.Body>
-                <Button
-                  as={Link}
-                  to="/grammar/presentsimple"
-                  className="fw-bold"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
-                  }}
-                >
-                  Start Learning
-                </Button>
-              </Card>
-            </Col>
-
-            <Col className="d-flex" md={3}>
-              <Card style={{ maxWidth: "100%" }}>
-                <Card.Img
-                  className="p-3 mx-auto d-block"
-                  variant="top"
-                  style={{ width: "60%" }}
-                  src={PastSimple}
-                />
-                <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
-                  <Card.Title className="h6 text-center fw-bold">
-                    Past Simple
-                  </Card.Title>
-                  <Card.Text className="h6 text-center">
-                    Past Simple Tense
-                  </Card.Text>
-                </Card.Body>
-                <Button
-                  as={Link}
-                  to="/grammar/pastsimple"
-                  className="fw-bold"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
-                  }}
-                >
-                  Start Learning
-                </Button>
-              </Card>
-            </Col>
-
-            <Col className="d-flex" md={3}>
-              <Card style={{ maxWidth: "100%" }}>
-                <Card.Img
-                  className="p-3 mx-auto d-block"
-                  variant="top"
-                  style={{ width: "60%" }}
-                  src={PresentContinous}
-                />
-                <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
-                  <Card.Title className="h6 text-center fw-bold">
-                    Present Continous
-                  </Card.Title>
-                  <Card.Text className="h6 text-center">
-                    Present Continous Tense
-                  </Card.Text>
-                </Card.Body>
-                <Button
-                  as={Link}
-                  to="/grammar/presentcontinous"
-                  className="fw-bold"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
-                  }}
-                >
-                  Start Learning
-                </Button>
-              </Card>
-            </Col>
-
-            <Col className="d-flex" md={3}>
-              <Card style={{ maxWidth: "100%" }}>
-                <Card.Img
-                  className="p-3 mx-auto d-block"
-                  variant="top"
-                  style={{ width: "60%" }}
-                  src={PresentPerfect}
-                />
-                <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
-                  <Card.Title className="h6 text-center fw-bold">
-                    Present Perfect
-                  </Card.Title>
-                  <Card.Text className="h6 text-center">
-                    Present Perfect Tense
-                  </Card.Text>
-                </Card.Body>
-                <Button
-                  as={Link}
-                  to="/grammar/presentperfect"
-                  className="fw-bold"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
-                  }}
-                >
-                  Start Learning
-                </Button>
-              </Card>
-            </Col>
-
-            <Col className="d-flex" md={3}>
-              <Card style={{ maxWidth: "100%" }}>
-                <Card.Img
-                  className="p-3 mx-auto d-block"
-                  variant="top"
-                  style={{ width: "60%" }}
-                  src={IrregularVerbs}
-                />
-                <Card.Body style={{ backgroundColor: "#e1e1e1" }}>
-                  <Card.Title className="h6 text-center fw-bold">
-                    Irregular Verbs
-                  </Card.Title>
-                  <Card.Text className="h6 text-center">
-                    Here are the common irregular verbs
-                  </Card.Text>
-                </Card.Body>
-                <Button
-                  as={Link}
-                  to="/grammar/irregularverbs"
-                  className="fw-bold"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
-                  }}
-                >
-                  Start Learning
-                </Button>
-              </Card>
-            </Col>
-          </Row>
+          <Accordion>
+            {grammarData &&
+              grammarData.map((grammar) => {
+                return (
+                  <>
+                    <Accordion.Item
+                      className="shadow p-2"
+                      eventKey={grammar.id}
+                    >
+                      <Accordion.Header>
+                        <h5 className="fw-bold">{grammar.title}</h5>
+                      </Accordion.Header>
+                      <Accordion.Body>
+                        <div className="container-sm">
+                          {grammar.description}
+                        </div>
+                        <div className="container-sm mt-4">
+                          <h2 className="fw-bold">Basic Form</h2>
+                          The basic form of {grammar.title}:
+                          <div
+                            style={{ backgroundColor: "#dbdbec" }}
+                            className="my-3 text-center p-3 rounded border border-secondary h3 fw-bold"
+                          >
+                            {grammar.basicForm}
+                          </div>
+                          <strong>For example:</strong>{" "}
+                          <i>{grammar.basicExample}</i>
+                        </div>
+                        <div className="container-sm mt-4">
+                          <h2 className="fw-bold">Negative form</h2>
+                          The negative form of {grammar.title}:
+                          <div
+                            style={{ backgroundColor: "#dbdbec" }}
+                            className="my-3 text-center p-3 rounded border border-secondary h3 fw-bold"
+                          >
+                            {grammar.negativeForm}
+                          </div>
+                          <strong>For example: </strong>
+                          <i>{grammar.negativeExample}</i>
+                        </div>
+                        <div className="container-sm mt-4">
+                          <h2 className="fw-bold">Interrogative Form</h2>
+                          The Interrogative form of {grammar.title}:
+                          <div
+                            style={{ backgroundColor: "#dbdbec" }}
+                            className="my-3 text-center p-3 rounded border border-secondary h3 fw-bold"
+                          >
+                            {grammar.interrogativeForm}
+                          </div>
+                          <strong>For example: </strong>
+                          <i>{grammar.interrogativeExample}</i>
+                        </div>
+                        <div className="container-sm mt-4">
+                          <h2 className="fw-bold">Exercises</h2>
+                          {grammar.exercises &&
+                            grammar.exercises.map((exercise) => {
+                              return (
+                                <p key={exercise.id}>
+                                  {exercise.id}. {exercise.sentence}
+                                  <strong>{exercise.clue}</strong>
+                                </p>
+                              );
+                            })}
+                        </div>
+                      </Accordion.Body>
+                    </Accordion.Item>
+                  </>
+                );
+              })}
+          </Accordion>
         </div>
       </div>
     </>

@@ -179,13 +179,14 @@ function VocabQuiz() {
     <>
       <div className="section p-4 mt-3">
         <div className="container-sm">
-          <div className="container-sm rounded border border-dark p-5">
+          <div className="shadow container-sm rounded-2 border p-5">
             {showScore ? (
               <div className="display-5 score-section">
-                You scored {score} out of {questions.length} correct
-                <br />
+                <p>
+                  You scored {score} out of {questions.length} correct
+                </p>
                 <Button
-                  className="rounded p-2 mt-3 me-3 fw-bold"
+                  className="rounded-2 shadow-sm p-2 mt-3 me-3 fw-bold"
                   onClick={() => window.location.reload(false)}
                   style={{
                     background:
@@ -196,7 +197,7 @@ function VocabQuiz() {
                   Reset Quiz
                 </Button>
                 <Button
-                  className="rounded p-2 mt-3 me-3 fw-bold"
+                  className="rounded-2 shadow-sm p-2 mt-3 me-3 fw-bold"
                   as={Link}
                   to="/quiz"
                   style={{
@@ -228,11 +229,12 @@ function VocabQuiz() {
                   </div>
                 </div>
                 <div className="answer-section mt-2">
+                  <p className="fw-bold">Choose your answer:</p>
                   {questions[currentQuestion].answerOptions.map(
                     (answerOption) => (
                       <Button
                         key={answerOption.id}
-                        className="w-100 rounded p-2 mt-2 fw-bold"
+                        className="w-100 rounded-2 shadow-sm p-2 mt-2 fw-bold"
                         onClick={() =>
                           handleAnswerOptionClick(answerOption.isCorrect)
                         }

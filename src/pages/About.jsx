@@ -2,9 +2,6 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import { Row, Col } from "react-bootstrap";
 
-import Info from "../images/info.png";
-import AboutMe from "../images/about_me.png";
-
 import { TabTitle } from "../utils/GeneralFunctions";
 
 function About() {
@@ -17,7 +14,7 @@ function About() {
       <div
         className="p-4"
         style={{
-          backgroundImage: 'url("src/images/about.jpg")',
+          backgroundColor: "#dbdbec",
         }}
       >
         <h1 className="container-sm display-5 fw-bold">About</h1>
@@ -40,13 +37,12 @@ function About() {
           >
             <span className="fas fa-arrow-up"></span>
           </Button>
-          <Row className="border rounded-2 p-4">
+          <Row className="border shadow rounded-2 p-4">
             <Col className="text-center my-auto" md={3}>
               <img
-                src={Info}
+                src="https://cdn-icons-png.flaticon.com/512/2538/2538026.png"
                 alt="Info"
-                style={{ maxWidth: "45%" }}
-                width={"125px"}
+                width={"100rem"}
               />
             </Col>
             <Col className="mt-4" md={9}>
@@ -74,13 +70,12 @@ function About() {
               </Row>
             </Col>
           </Row>
-          <Row className="border rounded-2 mt-3 p-4">
+          <Row className="border shadow rounded-2 mt-4 p-4">
             <Col className="text-center my-auto" md={3}>
               <img
-                src={AboutMe}
+                src="https://cdn-icons-png.flaticon.com/512/4310/4310155.png"
                 alt="Info"
-                style={{ maxWidth: "40%" }}
-                width={"125px"}
+                width={"45%"}
               />
             </Col>
             <Col className="mt-4" md={9}>
