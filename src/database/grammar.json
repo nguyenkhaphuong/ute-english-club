@@ -1,0 +1,158 @@
+[
+  {
+    "id": 1,
+    "title": "Present simple",
+    "head": "Learn the basics of the present simple and practice using it",
+    "description": "The present simple tense is used to give instructions, or to express habits, reported truths, etc.",
+    "basicForm": "S + V + Object",
+    "basicExample": "I live in Ho Chi Minh City. She works in the office.",
+    "negativeForm": "S + don't/doesn't + V + Object",
+    "negativeExample": "I don't live in Ho Chi Minh City. / He doesn't work in America.",
+    "interrogativeForm": "Do/Does + S + V + Object ?",
+    "interrogativeExample": "Do you study English? / Does he play soccer?",
+    "exercises": [
+      {
+        "id": 1,
+        "sentence": "I _________ to school.",
+        "clue": "(go)"
+      },
+      {
+        "id": 2,
+        "sentence": "They _________ games.",
+        "clue": "(not play)"
+      },
+      {
+        "id": 3,
+        "sentence": "John _________ to work.",
+        "clue": "(not go)"
+      },
+      {
+        "id": 4,
+        "sentence": "_______ Phuong ________ English everyday?",
+        "clue": "(study)"
+      },
+      {
+        "id": 5,
+        "sentence": "I ________ badminton twice a week",
+        "clue": "(play)"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Past simple",
+    "head": "Learn the basics of the past simple and practice using it",
+    "description": "The past simple tense is used to talk about events, action that occured and was completed at a particular time in the past.",
+    "basicForm": "S + V (past) + Object",
+    "basicExample": "I went to Hanoi. / She live in Australia.",
+    "negativeForm": "S + didn't + V + Object",
+    "negativeExample": "I didn't watch the World Cup yesterday. / He didn't finish his assignment.",
+    "interrogativeForm": "Did + S + V + Object ?",
+    "interrogativeExample": "Did you play video games last night?",
+    "exercises": [
+      {
+        "id": 1,
+        "sentence": "When I ________ young, I _________ playing computer games.",
+        "clue": "(be/like)"
+      },
+      {
+        "id": 2,
+        "sentence": "They _________ games.",
+        "clue": "(not play)"
+      },
+      {
+        "id": 3,
+        "sentence": "Many years ago, people _________ to work on foot.",
+        "clue": "(go)"
+      },
+      {
+        "id": 4,
+        "sentence": "What _______ you ________ yesterday?",
+        "clue": "(study)"
+      },
+      {
+        "id": 5,
+        "sentence": "You ________ your homework yesterday, so you must be punished.",
+        "clue": "(not finish)"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Present continuous",
+    "head": "Learn the basics of the present continuous and practice using it",
+    "description": "The present continous tense is used to about regular actions or activities that are happening at the moment of speaking. It can also be used for future plans.",
+    "basicForm": "S + be (am/is/are) + V-ing + Object",
+    "basicExample": "I am studying at New York University. / She is going out for dinner with her friends. / They are watching a movie.",
+    "negativeForm": "S + (am/is/are) not + V-ing + Object",
+    "negativeExample": "I am not working at the moment. / She is not living with us anymore. / We are not moving to America.",
+    "interrogativeForm": "(Am/Is/Are) + S + V-ing + Object ?",
+    "interrogativeExample": "Are you coming back to Ho Chi Minh City? / Is he playing video games?",
+    "exercises": [
+      {
+        "id": 1,
+        "sentence": "Keep silent! I _________ .",
+        "clue": "(work)"
+      },
+      {
+        "id": 2,
+        "sentence": "They _________ games at the moment.",
+        "clue": "(not play)"
+      },
+      {
+        "id": 3,
+        "sentence": "He _________ to the cinema on Sunday.",
+        "clue": "(go)"
+      },
+      {
+        "id": 4,
+        "sentence": "What _______ you ________ right now?",
+        "clue": "(do)"
+      },
+      {
+        "id": 5,
+        "sentence": "________ he _________ now?",
+        "clue": "(sleep)"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Present Perfect",
+    "head": "Learn the basics of the present perfect and practice using it",
+    "description": "The present perfect is used to something that started in the past and continues in the present.",
+    "basicForm": "S + have/has + V(past participle) + Object",
+    "basicExample": "I have lived in Ho Chi Minh City for 8 years.",
+    "negativeForm": "S + haven't/hasn't + V(past participle) + Object",
+    "negativeExample": "I haven't seen a concert before. / She is not living with us anymore. / We are not moving to America. / She hasn't seen her old friends since high school.",
+    "interrogativeForm": "Have/Has + S + V(past participle) + Object ?",
+    "interrogativeExample": "Have you finished your assignment yet?",
+    "exercises": [
+      {
+        "id": 1,
+        "sentence": "How long ________ you ________ English?",
+        "clue": "(study)"
+      },
+      {
+        "id": 2,
+        "sentence": "I _________ to New York since I was 16.",
+        "clue": "(be)"
+      },
+      {
+        "id": 3,
+        "sentence": "She _________ a new phone recently.",
+        "clue": "(buy)"
+      },
+      {
+        "id": 4,
+        "sentence": "Nam _________ his friend's house since high school.",
+        "clue": "(not visit)"
+      },
+      {
+        "id": 5,
+        "sentence": "________ he _________ his homework?",
+        "clue": "(finish)"
+      }
+    ]
+  }
+]
