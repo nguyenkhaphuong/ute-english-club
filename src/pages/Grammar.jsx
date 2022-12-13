@@ -1,12 +1,27 @@
-import React from "react";
-import { Button, Row, Accordion } from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import { Button, Accordion } from "react-bootstrap";
 
-import grammarData from "../database/grammar.json";
+import { grammarCollection } from "../../firebase";
+import { onSnapshot } from "firebase/firestore";
 
 import { TabTitle } from "../utils/GeneralFunctions";
 
 function Grammar() {
   TabTitle("Grammar | UTE English Club");
+
+  const [grammar, setGrammar] = useState([]);
+  useEffect(() =>
+    onSnapshot(grammarCollection, (snapshot) => {
+      setGrammar(
+        snapshot.docs.map((doc) => {
+          return {
+            id: doc.id,
+            ...doc.data(),
+          };
+        })
+      );
+    })
+  );
 
   const btnScrollToTop = () => {
     window.scrollTo(0, 0);
@@ -43,10 +58,10 @@ function Grammar() {
         </Button>
         <div className="container-sm">
           <Accordion>
-            {grammarData &&
-              grammarData.map((grammar) => {
+            {grammar &&
+              grammar.map((grammar) => {
                 return (
-                  <>
+                  <div key={grammar.id}>
                     <Accordion.Item
                       className="shadow p-2"
                       eventKey={grammar.id}
@@ -108,7 +123,7 @@ function Grammar() {
                         </div>
                       </Accordion.Body>
                     </Accordion.Item>
-                  </>
+                  </div>
                 );
               })}
           </Accordion>

@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+
 import { Button, Accordion, Table } from "react-bootstrap";
 
-import vocabulary from "../database/vocabulary.json";
+import { vocabCollection } from "../../firebase";
+import { onSnapshot } from "firebase/firestore";
 
 import { TabTitle } from "../utils/GeneralFunctions";
 
@@ -9,6 +11,20 @@ import { Howl } from "howler";
 
 function Vocabulary() {
   TabTitle("Vocabulary | UTE English Club");
+
+  const [vocabulary, setVocabulary] = useState([]);
+  useEffect(() =>
+    onSnapshot(vocabCollection, (snapshot) => {
+      setVocabulary(
+        snapshot.docs.map((doc) => {
+          return {
+            id: doc.id,
+            ...doc.data(),
+          };
+        })
+      );
+    })
+  );
 
   const btnScrollToTop = () => {
     window.scrollTo(0, 0);
