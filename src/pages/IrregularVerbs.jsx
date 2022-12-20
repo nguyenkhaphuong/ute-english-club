@@ -1,15 +1,30 @@
 import { Table, Button } from "react-bootstrap";
 import { TabTitle } from "../utils/GeneralFunctions";
-import verbsData from "../database/irregularVerbs.json";
-import React, { useState } from "react";
+import { irregularVerbsCollection } from "../../firebase";
+import { onSnapshot, orderBy, query } from "firebase/firestore";
+import React, { useState, useEffect } from "react";
 
 function IrregularVerbs() {
   TabTitle("Irregular Verbs | UTE English Club");
 
+  const [verbs, setVerbs] = useState([]);
+  const queryRef = query(irregularVerbsCollection, orderBy("base", "asc"));
+  useEffect(() =>
+    onSnapshot(queryRef, (snapshot) => {
+      setVerbs(
+        snapshot.docs.map((doc) => {
+          return {
+            id: doc.id,
+            ...doc.data(),
+          };
+        })
+      );
+    })
+  );
+
   const btnScrollToTop = () => {
     window.scrollTo(0, 0);
   };
-  const [verbs] = useState(verbsData);
   return (
     <>
       <div

@@ -1,10 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Accordion, Button } from "react-bootstrap";
+
+import { onSnapshot, orderBy, query } from "firebase/firestore";
+import { vocabQuizCollection } from "../../../firebase";
+
 import { TabTitle } from "../../utils/GeneralFunctions";
-import { category } from "../../database/vocabQuizData";
 
 function VocabQuiz() {
   TabTitle("Vocabulary Quiz | UTE English Club");
+
+  const [vocabQuiz, setVocabQuiz] = useState([]);
+  const queryRef = query(vocabQuizCollection, orderBy("id", "asc"));
+  useEffect(() =>
+    onSnapshot(queryRef, (snapshot) => {
+      setVocabQuiz(
+        snapshot.docs.map((doc) => {
+          return {
+            id: doc.id,
+            ...doc.data(),
+          };
+        })
+      );
+    })
+  );
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(false);
@@ -26,7 +44,7 @@ function VocabQuiz() {
     }
 
     const nextQuestion = currentQuestion + 1;
-    if (nextQuestion < category[0].questions.length) {
+    if (nextQuestion < vocabQuiz[0].questions.length) {
       setCurrentQuestion(nextQuestion);
     } else {
       setShowScore(true);
@@ -60,18 +78,21 @@ function VocabQuiz() {
           <span className="fas fa-arrow-up"></span>
         </Button>
         <div className="container-sm">
-          {category &&
-            category.map((category) => (
-              <div key={category.id}>
+          {vocabQuiz &&
+            vocabQuiz.map((vocabQuiz) => (
+              <div key={vocabQuiz.id}>
                 <Accordion>
-                  <Accordion.Item className="shadow p-2" eventKey={category.id}>
+                  <Accordion.Item
+                    className="shadow p-2"
+                    eventKey={vocabQuiz.id}
+                  >
                     <Accordion.Header>
                       <img
                         style={{ width: "2em", marginRight: "1.2em" }}
-                        src={category.image}
-                        alt={category.name}
+                        src={vocabQuiz.image}
+                        alt={vocabQuiz.name}
                       />
-                      <h5 className="fw-bold">{category.name}</h5>
+                      <h5 className="fw-bold">{vocabQuiz.name}</h5>
                     </Accordion.Header>
                     <Accordion.Body>
                       <div className="shadow container-sm rounded-2 border p-5">
@@ -79,7 +100,7 @@ function VocabQuiz() {
                           <div className="display-5 score-section">
                             <p>
                               You scored {score} out of{" "}
-                              {category.questions.length} correct
+                              {vocabQuiz.questions.length} correct
                             </p>
                             <Button
                               className="rounded-2 shadow-sm p-2 mt-3 me-3 fw-bold"
@@ -98,18 +119,18 @@ function VocabQuiz() {
                             <div className="question-section">
                               <div className="fw-bold h3 question-count mb-2">
                                 <span>Question {currentQuestion + 1}</span>/
-                                {category.questions.length}
+                                {vocabQuiz.questions.length}
                               </div>
                               <div className="h5 question-text mb-2">
                                 {
-                                  category.questions[currentQuestion]
+                                  vocabQuiz.questions[currentQuestion]
                                     .questionText
                                 }
                                 <br />
                                 <img
                                   className="mx-auto d-block"
                                   src={
-                                    category.questions[currentQuestion].image
+                                    vocabQuiz.questions[currentQuestion].image
                                   }
                                   alt="Info"
                                   width={"125px"}
@@ -119,7 +140,7 @@ function VocabQuiz() {
                             </div>
                             <div className="answer-section mt-2">
                               <p className="fw-bold">Choose your answer:</p>
-                              {category.questions[
+                              {vocabQuiz.questions[
                                 currentQuestion
                               ].answerOptions.map((answerOption) => (
                                 <Button

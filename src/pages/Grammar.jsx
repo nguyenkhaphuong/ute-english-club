@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Button, Accordion } from "react-bootstrap";
 
 import { grammarCollection } from "../../firebase";
-import { onSnapshot } from "firebase/firestore";
+import { onSnapshot, orderBy, query } from "firebase/firestore";
 
 import { TabTitle } from "../utils/GeneralFunctions";
 
@@ -10,8 +10,9 @@ function Grammar() {
   TabTitle("Grammar | UTE English Club");
 
   const [grammar, setGrammar] = useState([]);
+  const queryRef = query(grammarCollection, orderBy("id", "asc"));
   useEffect(() =>
-    onSnapshot(grammarCollection, (snapshot) => {
+    onSnapshot(queryRef, (snapshot) => {
       setGrammar(
         snapshot.docs.map((doc) => {
           return {
