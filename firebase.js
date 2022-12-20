@@ -18,7 +18,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-export default db;
-
 export const vocabCollection = collection(db, "vocabulary");
 export const grammarCollection = collection(db, "grammar");
+export const irregularVerbsCollection = collection(db, "irregularverbs");
+export const vocabQuizCollection = collection(db, "vocabularyquiz");
+export const grammarQuizCollection = collection(db, "grammarquiz");
