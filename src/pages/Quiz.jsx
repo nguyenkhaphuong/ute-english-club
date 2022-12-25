@@ -3,12 +3,11 @@ import { Button, Row, Col, Card } from "react-bootstrap";
 
 import { TabTitle } from "../utils/GeneralFunctions";
 import { Link } from "react-router-dom";
+import ScrollToTop from "../components/scrollToTop/ScrollToTop";
 
 function Quiz() {
   TabTitle("Quiz | UTE English Club");
-  const btnScrollToTop = () => {
-    window.scrollTo(0, 0);
-  };
+
   return (
     <>
       <div
@@ -21,21 +20,7 @@ function Quiz() {
         <p className="container-sm">Review your lessons with quizzes</p>
       </div>
       <div className="section mt-3 px-4">
-        <Button
-          className="btn-floating sticky-bottom btn-lg justify-content-center align-self-center rounded-circle"
-          style={{
-            position: "fixed",
-            right: "20px",
-            bottom: "50px",
-            width: "50px",
-            height: "50px",
-            background:
-              "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
-          }}
-          onClick={btnScrollToTop}
-        >
-          <span className="fas fa-arrow-up"></span>
-        </Button>
+        <ScrollToTop />
         <div className="container-sm">
           <Row className="mt-1 gy-4">
             <Col md={6}>

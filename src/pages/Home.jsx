@@ -1,37 +1,21 @@
 import React from "react";
-import { Button, Row, Col, Card, Form } from "react-bootstrap";
+import { Button, Row, Col } from "react-bootstrap";
 import ImageSlider from "../components/imageslider/ImageSlider";
 
 import { TabTitle } from "../utils/GeneralFunctions";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import ScrollToTop from "../components/scrollToTop/ScrollToTop";
+import ContactForm from "../components/contact/ContactForm";
 
 function Home() {
   TabTitle("Home | UTE English Club");
-
-  const btnScrollToTop = () => {
-    window.scrollTo(0, 0);
-  };
 
   return (
     <>
       <ImageSlider />
       <div className="section px-4">
-        <Button
-          className="btn-floating sticky-bottom btn-lg justify-content-center align-self-center rounded-circle"
-          style={{
-            position: "fixed",
-            right: "20px",
-            bottom: "50px",
-            width: "50px",
-            height: "50px",
-            background:
-              "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
-          }}
-          onClick={btnScrollToTop}
-        >
-          <span className="fas fa-arrow-up"></span>
-        </Button>
+        <ScrollToTop />
         <div className="section">
           <div className="container-sm">
             <div className="container-sm">
@@ -200,71 +184,7 @@ function Home() {
                 />
               </Col>
               <Col md={6}>
-                <Form action="https://formspree.io/f/xwkzqrar" method="POST">
-                  <Form.Group className="mb-3" controlId="formName">
-                    <Form.Label>
-                      <span className="fas fa-user"></span> Your Name
-                      <strong>*</strong>
-                    </Form.Label>
-                    <Form.Control
-                      className="rounded-2"
-                      type="text"
-                      name="name"
-                      required
-                    />
-                  </Form.Group>
-
-                  <Form.Group className="mb-3" controlId="formEmail">
-                    <Form.Label>
-                      <span className="fas fa-at"></span> Email address
-                      <strong>*</strong>
-                    </Form.Label>
-                    <Form.Control
-                      className="rounded-2"
-                      type="email"
-                      name="email"
-                      placeholder="name@example.com"
-                      required
-                    />
-                  </Form.Group>
-
-                  <Form.Group className="mb-3" controlId="formSubject">
-                    <Form.Label>
-                      <span className="fas fa-envelope"></span> Subject
-                      <strong>*</strong>
-                    </Form.Label>
-                    <Form.Control
-                      className="rounded-2"
-                      type="text"
-                      name="subject"
-                      required
-                    />
-                  </Form.Group>
-
-                  <Form.Group className="mb-3" controlId="formMessage">
-                    <Form.Label>
-                      <span className="fas fa-solid fa-comment"></span> Your
-                      Message<strong>*</strong>
-                    </Form.Label>
-                    <Form.Control
-                      className="rounded-2"
-                      as="textarea"
-                      name="message"
-                      rows={3}
-                      required
-                    />
-                  </Form.Group>
-                  <Button
-                    className="rounded-2 fw-bold w-100"
-                    style={{
-                      background:
-                        "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
-                    }}
-                    type="submit"
-                  >
-                    <span className="fas fa-paper-plane"></span> Submit
-                  </Button>
-                </Form>
+                <ContactForm />
               </Col>
             </Row>
           </div>

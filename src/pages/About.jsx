@@ -1,14 +1,12 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
 import { Row, Col } from "react-bootstrap";
 
 import { TabTitle } from "../utils/GeneralFunctions";
+import ScrollToTop from "../components/scrollToTop/ScrollToTop";
 
 function About() {
   TabTitle("About | UTE English Club");
-  const btnScrollToTop = () => {
-    window.scrollTo(0, 0);
-  };
+
   return (
     <>
       <div
@@ -22,21 +20,7 @@ function About() {
       </div>
       <div className="section px-4 mt-3">
         <div className="container-sm p-4">
-          <Button
-            className="btn-floating sticky-bottom btn-lg justify-content-center align-self-center rounded-circle"
-            style={{
-              position: "fixed",
-              right: "20px",
-              bottom: "50px",
-              width: "50px",
-              height: "50px",
-              background:
-                "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
-            }}
-            onClick={btnScrollToTop}
-          >
-            <span className="fas fa-arrow-up"></span>
-          </Button>
+          <ScrollToTop />
           <Row className="border shadow rounded-2 p-4">
             <Col className="text-center my-auto" md={3}>
               <img

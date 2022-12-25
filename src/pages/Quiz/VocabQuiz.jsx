@@ -5,6 +5,7 @@ import { onSnapshot, orderBy, query } from "firebase/firestore";
 import { vocabQuizCollection } from "../../../firebase";
 
 import { TabTitle } from "../../utils/GeneralFunctions";
+import ScrollToTop from "../../components/scrollToTop/ScrollToTop";
 
 function VocabQuiz() {
   TabTitle("Vocabulary Quiz | UTE English Club");
@@ -34,10 +35,6 @@ function VocabQuiz() {
     setShowScore(false);
   };
 
-  const btnScrollToTop = () => {
-    window.scrollTo(0, 0);
-  };
-
   const handleAnswerOptionClick = (isCorrect) => {
     if (isCorrect) {
       setScore(score + 1);
@@ -50,6 +47,7 @@ function VocabQuiz() {
       setShowScore(true);
     }
   };
+
   return (
     <>
       <div
@@ -62,21 +60,7 @@ function VocabQuiz() {
         <p className="container-sm">Review your vocabulary with quizzes</p>
       </div>
       <div className="section p-4 mt-3">
-        <Button
-          className="btn-floating sticky-bottom btn-lg justify-content-center align-self-center rounded-circle"
-          style={{
-            position: "fixed",
-            right: "20px",
-            bottom: "50px",
-            width: "50px",
-            height: "50px",
-            background:
-              "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
-          }}
-          onClick={btnScrollToTop}
-        >
-          <span className="fas fa-arrow-up"></span>
-        </Button>
+        <ScrollToTop />
         <div className="container-sm">
           {vocabQuiz &&
             vocabQuiz.map((vocabQuiz) => (

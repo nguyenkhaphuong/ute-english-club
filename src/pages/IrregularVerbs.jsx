@@ -3,6 +3,7 @@ import { TabTitle } from "../utils/GeneralFunctions";
 import { irregularVerbsCollection } from "../../firebase";
 import { onSnapshot, orderBy, query } from "firebase/firestore";
 import React, { useState, useEffect } from "react";
+import ScrollToTop from "../components/scrollToTop/ScrollToTop";
 
 function IrregularVerbs() {
   TabTitle("Irregular Verbs | UTE English Club");
@@ -22,9 +23,6 @@ function IrregularVerbs() {
     })
   );
 
-  const btnScrollToTop = () => {
-    window.scrollTo(0, 0);
-  };
   return (
     <>
       <div
@@ -37,22 +35,7 @@ function IrregularVerbs() {
         <p className="container-sm">Here are the common irregular verbs</p>
       </div>
       <div className="section mt-3 px-4">
-        {/*Scroll to top button*/}
-        <Button
-          className="btn-floating sticky-bottom btn-lg justify-content-center align-self-center rounded-circle"
-          style={{
-            position: "fixed",
-            right: "20px",
-            bottom: "50px",
-            width: "50px",
-            height: "50px",
-            background:
-              "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
-          }}
-          onClick={btnScrollToTop}
-        >
-          <span className="fas fa-arrow-up"></span>
-        </Button>
+        <ScrollToTop />
         <div className="container-sm">
           <Table className="shadow" striped bordered responsive="sm">
             <thead
