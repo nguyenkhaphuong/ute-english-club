@@ -5,6 +5,7 @@ import { onSnapshot, orderBy, query } from "firebase/firestore";
 import { grammarQuizCollection } from "../../../firebase";
 
 import { TabTitle } from "../../utils/GeneralFunctions";
+import ScrollToTop from "../../components/scrollToTop/ScrollToTop";
 
 function GrammarQuiz() {
   TabTitle("Grammar Quiz | UTE English Club");
