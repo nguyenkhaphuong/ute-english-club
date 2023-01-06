@@ -1,4 +1,4 @@
-import { Table, Button } from "react-bootstrap";
+import { Table } from "react-bootstrap";
 import { TabTitle } from "../utils/GeneralFunctions";
 import { irregularVerbsCollection } from "../../firebase";
 import { onSnapshot, orderBy, query } from "firebase/firestore";

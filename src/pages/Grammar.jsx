@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Button, Accordion } from "react-bootstrap";
+import { Accordion } from "react-bootstrap";
 
 import { grammarCollection } from "../../firebase";
 import { onSnapshot, orderBy, query } from "firebase/firestore";
