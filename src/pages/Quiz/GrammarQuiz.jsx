@@ -1,17 +1,16 @@
-import React, { useState, useEffect } from "react";
-import { Accordion, Button } from "react-bootstrap";
+import React, { useState, useEffect } from 'react'
+import { Button, Row, Col, Card } from 'react-bootstrap'
 
-import { onSnapshot, orderBy, query } from "firebase/firestore";
-import { grammarQuizCollection } from "../../../firebase";
+import { onSnapshot, orderBy, query } from 'firebase/firestore'
+import { grammarQuizCollection } from '../../../firebase'
 
-import { TabTitle } from "../../utils/GeneralFunctions";
-import ScrollToTop from "../../components/scrollToTop/ScrollToTop";
+import ScrollToTop from '../../components/scrollToTop/ScrollToTop'
+import { Helmet } from 'react-helmet-async'
+import { Link, Outlet } from 'react-router-dom'
 
 function GrammarQuiz() {
-  TabTitle("Grammar Quiz | UTE English Club");
-
-  const [grammarQuiz, setGrammarQuiz] = useState([]);
-  const queryRef = query(grammarQuizCollection, orderBy("id", "asc"));
+  const [grammarQuiz, setGrammarQuiz] = useState([])
+  const queryRef = query(grammarQuizCollection, orderBy('id', 'asc'))
   useEffect(() =>
     onSnapshot(queryRef, (snapshot) => {
       setGrammarQuiz(
@@ -19,129 +18,58 @@ function GrammarQuiz() {
           return {
             id: doc.id,
             ...doc.data(),
-          };
+          }
         })
-      );
+      )
     })
-  );
-
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [showScore, setShowScore] = useState(false);
-  const [score, setScore] = useState(0);
-
-  const resetQuiz = () => {
-    setScore(0);
-    setCurrentQuestion(0);
-    setShowScore(false);
-  };
-
-  const handleAnswerOptionClick = (isCorrect) => {
-    if (isCorrect) {
-      setScore(score + 1);
-    }
-
-    const nextQuestion = currentQuestion + 1;
-    if (nextQuestion < grammarQuiz[0].questions.length) {
-      setCurrentQuestion(nextQuestion);
-    } else {
-      setShowScore(true);
-    }
-  };
+  )
 
   return (
     <>
+      <Helmet>
+        <title>Grammar Quiz | UTE English Club</title>
+        <meta name='description' content='Practice your grammar with quizzes' />
+      </Helmet>
       <div
-        className="p-4"
+        className='p-4'
         style={{
-          backgroundColor: "#dbdbec",
-        }}
-      >
-        <h1 className="container-sm display-5 fw-bold">Grammar Quiz</h1>
-        <p className="container-sm">Review your grammar with quizzes</p>
+          backgroundColor: '#dbdbec',
+        }}>
+        <h1 className='container-sm display-5 fw-bold'>Grammar Quiz</h1>
+        <p className='container-sm'>Review your grammar with quizzes</p>
       </div>
-      <div className="section p-4 mt-3">
+      <div className='section px-4 mt-3'>
         <ScrollToTop />
-        <div className="container-sm">
-          {grammarQuiz &&
-            grammarQuiz.map((grammarQuiz) => (
-              <div key={grammarQuiz.id}>
-                <Accordion>
-                  <Accordion.Item
-                    className="shadow p-2"
-                    eventKey={grammarQuiz.id}
-                  >
-                    <Accordion.Header>
-                      <h5 className="fw-bold">{grammarQuiz.name}</h5>
-                    </Accordion.Header>
-                    <Accordion.Body>
-                      <div className="shadow container-sm rounded-2 border p-5">
-                        {showScore ? (
-                          <div className="display-5 score-section">
-                            <p>
-                              You scored {score} out of{" "}
-                              {grammarQuiz.questions.length} correct
-                            </p>
-                            <Button
-                              className="rounded-2 shadow-sm p-2 mt-3 me-3 fw-bold"
-                              onClick={resetQuiz}
-                              style={{
-                                background:
-                                  "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
-                                fontSize: "20px",
-                              }}
-                            >
-                              Reset Quiz
-                            </Button>
-                          </div>
-                        ) : (
-                          <>
-                            <div className="question-section">
-                              <div className="fw-bold h3 question-count mb-2">
-                                <span>Question {currentQuestion + 1}</span>/
-                                {grammarQuiz.questions.length}
-                              </div>
-                              <div className="h5 question-text mb-2">
-                                {
-                                  grammarQuiz.questions[currentQuestion]
-                                    .questionText
-                                }
-                              </div>
-                            </div>
-                            <div className="answer-section mt-2">
-                              <p className="fw-bold">Choose your answer:</p>
-                              {grammarQuiz.questions[
-                                currentQuestion
-                              ].answerOptions.map((answerOption) => (
-                                <Button
-                                  key={answerOption.id}
-                                  className="w-100 rounded-2 shadow-sm p-2 mt-2 fw-bold"
-                                  onClick={() =>
-                                    handleAnswerOptionClick(
-                                      answerOption.isCorrect
-                                    )
-                                  }
-                                  style={{
-                                    background:
-                                      "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
-                                    fontSize: "20px",
-                                  }}
-                                >
-                                  {answerOption.answerText}
-                                </Button>
-                              ))}
-                            </div>
-                          </>
-                        )}
-                      </div>
-                    </Accordion.Body>
-                  </Accordion.Item>
-                </Accordion>
-              </div>
-            ))}
+        <div className='container-sm'>
+          <Row className='mt-1 gy-4'>
+            {grammarQuiz &&
+              grammarQuiz.map((grammarQuiz) => (
+                <Col key={grammarQuiz.id} sm={12} md={6} lg={4} xl={3}>
+                  <Card className='shadow text-center'>
+                    <Card.Body style={{ backgroundColor: '#e1e1e1' }}>
+                      <Card.Title className='fw-bold'>
+                        {grammarQuiz.name}
+                      </Card.Title>
+                      <Card.Text>Practice {grammarQuiz.name}</Card.Text>
+                    </Card.Body>
+                    <Button
+                      as={Link}
+                      className='fw-bold'
+                      style={{
+                        background:
+                          'linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)',
+                      }}
+                      to={`/quiz/grammar/${grammarQuiz.name}`}>
+                      Start Learning
+                    </Button>
+                  </Card>
+                </Col>
+              ))}
+          </Row>
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default GrammarQuiz;
+export default GrammarQuiz
