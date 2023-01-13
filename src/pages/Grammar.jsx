@@ -1,17 +1,16 @@
-import React, { useState, useEffect } from "react";
-import { Accordion } from "react-bootstrap";
+import React, { useState, useEffect } from 'react'
+import { Button, Card, Row, Col } from 'react-bootstrap'
 
-import { grammarCollection } from "../../firebase";
-import { onSnapshot, orderBy, query } from "firebase/firestore";
+import { grammarCollection } from '../../firebase'
+import { onSnapshot, orderBy, query } from 'firebase/firestore'
 
-import { TabTitle } from "../utils/GeneralFunctions";
-import ScrollToTop from "../components/scrollToTop/ScrollToTop";
+import ScrollToTop from '../components/scrollToTop/ScrollToTop'
+import { Helmet } from 'react-helmet-async'
+import { Link, Outlet } from 'react-router-dom'
 
 function Grammar() {
-  TabTitle("Grammar | UTE English Club");
-
-  const [grammar, setGrammar] = useState([]);
-  const queryRef = query(grammarCollection, orderBy("id", "asc"));
+  const [grammar, setGrammar] = useState([])
+  const queryRef = query(grammarCollection, orderBy('id', 'asc'))
   useEffect(() =>
     onSnapshot(queryRef, (snapshot) => {
       setGrammar(
@@ -19,102 +18,63 @@ function Grammar() {
           return {
             id: doc.id,
             ...doc.data(),
-          };
+          }
         })
-      );
+      )
     })
-  );
+  )
 
   return (
     <>
+      <Helmet>
+        <title>Grammar | UTE English Club</title>
+        <meta name='description' content='Learn grammar' />
+      </Helmet>
       <div
-        className="p-4"
+        className='p-4'
         style={{
-          backgroundColor: "#dbdbec",
-        }}
-      >
-        <h1 className="container-sm display-5 fw-bold">Grammar</h1>
-        <p className="container-sm">
+          backgroundColor: '#dbdbec',
+        }}>
+        <h1 className='container-sm display-5 fw-bold'>Grammar</h1>
+        <p className='container-sm'>
           Here are the basic grammar structures you need to master your English
         </p>
       </div>
-      <div className="section mt-3 px-4">
+      <div className='section mt-3 px-4'>
         <ScrollToTop />
-        <div className="container-sm">
-          <Accordion>
+        <div className='container-sm'>
+          <Row className='mt-1 gy-4'>
             {grammar &&
-              grammar.map((grammar) => {
-                return (
-                  <div key={grammar.id}>
-                    <Accordion.Item
-                      className="shadow p-2"
-                      eventKey={grammar.id}
-                    >
-                      <Accordion.Header>
-                        <h5 className="fw-bold">{grammar.title}</h5>
-                      </Accordion.Header>
-                      <Accordion.Body>
-                        <div className="container-sm">
-                          {grammar.description}
-                        </div>
-                        <div className="container-sm mt-4">
-                          <h2 className="fw-bold">Basic Form</h2>
-                          The basic form of {grammar.title}:
-                          <div
-                            style={{ backgroundColor: "#dbdbec" }}
-                            className="my-3 text-center p-3 rounded border border-secondary h3 fw-bold"
-                          >
-                            {grammar.basicForm}
-                          </div>
-                          <strong>For example:</strong>{" "}
-                          <i>{grammar.basicExample}</i>
-                        </div>
-                        <div className="container-sm mt-4">
-                          <h2 className="fw-bold">Negative form</h2>
-                          The negative form of {grammar.title}:
-                          <div
-                            style={{ backgroundColor: "#dbdbec" }}
-                            className="my-3 text-center p-3 rounded border border-secondary h3 fw-bold"
-                          >
-                            {grammar.negativeForm}
-                          </div>
-                          <strong>For example: </strong>
-                          <i>{grammar.negativeExample}</i>
-                        </div>
-                        <div className="container-sm mt-4">
-                          <h2 className="fw-bold">Interrogative Form</h2>
-                          The Interrogative form of {grammar.title}:
-                          <div
-                            style={{ backgroundColor: "#dbdbec" }}
-                            className="my-3 text-center p-3 rounded border border-secondary h3 fw-bold"
-                          >
-                            {grammar.interrogativeForm}
-                          </div>
-                          <strong>For example: </strong>
-                          <i>{grammar.interrogativeExample}</i>
-                        </div>
-                        <div className="container-sm mt-4">
-                          <h2 className="fw-bold">Exercises</h2>
-                          {grammar.exercises &&
-                            grammar.exercises.map((exercise) => {
-                              return (
-                                <p key={exercise.id}>
-                                  {exercise.id}. {exercise.sentence}
-                                  <strong>{exercise.clue}</strong>
-                                </p>
-                              );
-                            })}
-                        </div>
-                      </Accordion.Body>
-                    </Accordion.Item>
-                  </div>
-                );
-              })}
-          </Accordion>
+              grammar.map((grammar) => (
+                <Col key={grammar.id} sm={12} md={6} lg={4} xl={3}>
+                  <Card className='shadow text-center'>
+                    <Card.Body>
+                      <Card.Title className='fw-bold'>
+                        {grammar.title}
+                      </Card.Title>
+                      <Card.Text style={{ height: '8rem' }}>
+                        {grammar.description}
+                      </Card.Text>
+                    </Card.Body>
+                    <Button
+                      as={Link}
+                      className='d-block'
+                      style={{
+                        background:
+                          'linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)',
+                      }}
+                      to={`/grammar/${grammar.title}`}>
+                      <span className='fw-bold'>Start Learning</span>
+                    </Button>
+                  </Card>
+                </Col>
+              ))}
+          </Row>
         </div>
       </div>
+      <Outlet />
     </>
-  );
+  )
 }
 
-export default Grammar;
+export default Grammar

@@ -1,15 +1,13 @@
-import { Table } from "react-bootstrap";
-import { TabTitle } from "../utils/GeneralFunctions";
-import { irregularVerbsCollection } from "../../firebase";
-import { onSnapshot, orderBy, query } from "firebase/firestore";
-import React, { useState, useEffect } from "react";
-import ScrollToTop from "../components/scrollToTop/ScrollToTop";
+import { Table } from 'react-bootstrap'
+import { irregularVerbsCollection } from '../../firebase'
+import { onSnapshot, orderBy, query } from 'firebase/firestore'
+import React, { useState, useEffect } from 'react'
+import ScrollToTop from '../components/scrollToTop/ScrollToTop'
+import { Helmet } from 'react-helmet-async'
 
 function IrregularVerbs() {
-  TabTitle("Irregular Verbs | UTE English Club");
-
-  const [verbs, setVerbs] = useState([]);
-  const queryRef = query(irregularVerbsCollection, orderBy("base", "asc"));
+  const [verbs, setVerbs] = useState([])
+  const queryRef = query(irregularVerbsCollection, orderBy('base', 'asc'))
   useEffect(() =>
     onSnapshot(queryRef, (snapshot) => {
       setVerbs(
@@ -17,34 +15,36 @@ function IrregularVerbs() {
           return {
             id: doc.id,
             ...doc.data(),
-          };
+          }
         })
-      );
+      )
     })
-  );
+  )
 
   return (
     <>
+      <Helmet>
+        <title>Irregular Verbs | UTE English Club</title>
+        <meta name='description' content='Learn irregular verbs' />
+      </Helmet>
       <div
-        className="p-4"
+        className='p-4'
         style={{
-          backgroundColor: "#dbdbec",
-        }}
-      >
-        <h1 className="container-sm display-5 fw-bold">Irregular Verbs</h1>
-        <p className="container-sm">Here are the common irregular verbs</p>
+          backgroundColor: '#dbdbec',
+        }}>
+        <h1 className='container-sm display-5 fw-bold'>Irregular Verbs</h1>
+        <p className='container-sm'>Here are the common irregular verbs</p>
       </div>
-      <div className="section mt-3 px-4">
+      <div className='section mt-3 px-4'>
         <ScrollToTop />
-        <div className="container-sm">
-          <Table className="shadow" striped bordered responsive="sm">
+        <div className='container-sm'>
+          <Table className='shadow' striped bordered responsive='sm'>
             <thead
-              className="text-white"
+              className='text-white'
               style={{
                 background:
-                  "linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)",
-              }}
-            >
+                  'linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)',
+              }}>
               <tr>
                 <th>Base verbs</th>
                 <th>Past Simple</th>
@@ -64,7 +64,7 @@ function IrregularVerbs() {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default IrregularVerbs;
+export default IrregularVerbs
