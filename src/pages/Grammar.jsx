@@ -50,7 +50,7 @@ function Grammar() {
                   <Card
                     className='shadow text-center'
                     as={Link}
-                    to={`/vocabulary/${grammar.title}`}
+                    to={`/grammar/${grammar.link}`}
                     style={{
                       maxWidth: '100%',
                       textDecoration: 'none',
@@ -71,7 +71,7 @@ function Grammar() {
                         background:
                           'linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)',
                       }}
-                      to={`/grammar/${grammar.title}`}>
+                      to={`/grammar/${grammar.link}`}>
                       <span className='fw-bold'>Start Learning</span>
                     </Button>
                   </Card>

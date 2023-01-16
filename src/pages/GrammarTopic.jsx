@@ -24,7 +24,7 @@ export default function GrammarTopic() {
     })
   )
 
-  const grammarTopic = grammar.filter((doc) => doc.title === title)
+  const grammarTopic = grammar.filter((doc) => doc.link === title)
   return (
     <>
       {grammarTopic &&

@@ -53,7 +53,7 @@ function GrammarQuiz() {
                       color: 'black',
                     }}
                     as={Link}
-                    to={`/quiz/grammar/${grammarQuiz.name}`}>
+                    to={`/quiz/grammar/${grammarQuiz.link}`}>
                     <Card.Body>
                       <Card.Title className='fw-bold'>
                         {grammarQuiz.name}
@@ -69,7 +69,7 @@ function GrammarQuiz() {
                         background:
                           'linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)',
                       }}
-                      to={`/quiz/grammar/${grammarQuiz.name}`}>
+                      to={`/quiz/grammar/${grammarQuiz.link}`}>
                       Start Quiz
                     </Button>
                   </Card>

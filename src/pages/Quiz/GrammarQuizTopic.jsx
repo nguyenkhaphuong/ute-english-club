@@ -26,7 +26,7 @@ export default function GrammarQuizTopic() {
     })
   )
 
-  const quizTopic = grammarQuiz.filter((doc) => doc.name === name)
+  const quizTopic = grammarQuiz.filter((doc) => doc.link === name)
 
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [showScore, setShowScore] = useState(false)
