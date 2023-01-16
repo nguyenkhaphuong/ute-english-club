@@ -20,7 +20,14 @@ function Home() {
         <div className='section'>
           <div className='container-sm'>
             <div className='container-sm'>
-              <Row className='border shadow rounded-2 p-4'>
+              <Row
+                as={Link}
+                to='/vocabulary'
+                className='border shadow rounded-2 p-4'
+                style={{
+                  textDecoration: 'none',
+                  color: 'black',
+                }}>
                 <Col className='my-auto' sm={6}>
                   <h2 className='fw-bold'>Vocabulary</h2>
                   <p>Here are the list of topics that you want to learn</p>
@@ -50,7 +57,14 @@ function Home() {
       <div className='section px-4'>
         <div className='container-sm'>
           <div className='container-sm'>
-            <Row className='border shadow rounded-2 p-4'>
+            <Row
+              className='border shadow rounded-2 p-4'
+              as={Link}
+              to='/grammar'
+              style={{
+                textDecoration: 'none',
+                color: 'black',
+              }}>
               <Col className='my-auto' sm={6}>
                 <h2 className='fw-bold'>Grammar</h2>
                 <p>
@@ -82,7 +96,14 @@ function Home() {
       <div className='section px-4'>
         <div className='container-sm'>
           <div className='container-sm'>
-            <Row className='border shadow rounded-2 p-4'>
+            <Row
+              className='border shadow rounded-2 p-4'
+              as={Link}
+              to='/irregularverbs'
+              style={{
+                textDecoration: 'none',
+                color: 'black',
+              }}>
               <Col className='my-auto' sm={6}>
                 <h2 className='fw-bold'>Irregular Verbs</h2>
                 <p>Here are the common irregular verbs</p>
@@ -111,7 +132,14 @@ function Home() {
       <div className='section px-4'>
         <div className='container-sm'>
           <div className='container-sm'>
-            <Row className='border shadow rounded-2 p-4'>
+            <Row
+              className='border shadow rounded-2 p-4'
+              as={Link}
+              to='/quiz'
+              style={{
+                textDecoration: 'none',
+                color: 'black',
+              }}>
               <Col className='my-auto' sm={6}>
                 <h2 className='fw-bold'>Quiz</h2>
                 <p>Review your lessons with quizzes</p>
@@ -140,7 +168,14 @@ function Home() {
       <div className='section px-4'>
         <div className='container-sm'>
           <div className='container-sm'>
-            <Row className='border shadow rounded-2 p-4'>
+            <Row
+              className='border shadow rounded-2 p-4'
+              as={Link}
+              to='/about'
+              style={{
+                textDecoration: 'none',
+                color: 'black',
+              }}>
               <Col className='my-auto' sm={6}>
                 <h2 className='fw-bold'>About</h2>
                 <p>About this website</p>

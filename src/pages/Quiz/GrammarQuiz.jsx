@@ -45,12 +45,22 @@ function GrammarQuiz() {
             {grammarQuiz &&
               grammarQuiz.map((grammarQuiz) => (
                 <Col key={grammarQuiz.id} sm={12} md={6} lg={4} xl={3}>
-                  <Card className='shadow text-center'>
-                    <Card.Body style={{ backgroundColor: '#e1e1e1' }}>
+                  <Card
+                    className='shadow text-center'
+                    style={{
+                      maxWidth: '100%',
+                      textDecoration: 'none',
+                      color: 'black',
+                    }}
+                    as={Link}
+                    to={`/quiz/grammar/${grammarQuiz.name}`}>
+                    <Card.Body>
                       <Card.Title className='fw-bold'>
                         {grammarQuiz.name}
                       </Card.Title>
-                      <Card.Text>Practice {grammarQuiz.name}</Card.Text>
+                      <Card.Text style={{ height: '8rem' }}>
+                        {grammarQuiz.description}
+                      </Card.Text>
                     </Card.Body>
                     <Button
                       as={Link}
@@ -60,7 +70,7 @@ function GrammarQuiz() {
                           'linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)',
                       }}
                       to={`/quiz/grammar/${grammarQuiz.name}`}>
-                      Start Learning
+                      Start Quiz
                     </Button>
                   </Card>
                 </Col>

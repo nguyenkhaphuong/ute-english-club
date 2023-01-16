@@ -41,7 +41,7 @@ function Vocabulary() {
           Here are the list of topics that you want to learn
         </p>
       </div>
-      <div className='section my-3 px-4'>
+      <div className='section mt-3 px-4'>
         <ScrollToTop />
         <div className='container-sm'>
           <Row className='mt-1 gy-4'>
@@ -50,15 +50,21 @@ function Vocabulary() {
                 return (
                   <Col key={vocab.id} xs={12} sm={6} md={6} lg={4} xl={3}>
                     <Card
+                      as={Link}
+                      to={`/vocabulary/${vocab.title}`}
                       className='shadow text-center'
-                      style={{ maxWidth: '100%' }}>
+                      style={{
+                        maxWidth: '100%',
+                        textDecoration: 'none',
+                        color: 'black',
+                      }}>
                       <Card.Img
                         variant='top'
                         className='mx-auto d-block p-2'
                         style={{ width: '50%' }}
                         src={vocab.image}
                       />
-                      <Card.Body style={{ backgroundColor: '#e1e1e1' }}>
+                      <Card.Body>
                         <Card.Title className='fw-bold'>
                           {vocab.title}
                         </Card.Title>

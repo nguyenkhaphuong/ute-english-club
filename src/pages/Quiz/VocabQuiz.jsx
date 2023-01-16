@@ -41,14 +41,22 @@ function VocabQuiz() {
         <h1 className='container-sm display-5 fw-bold'>Vocabulary Quiz</h1>
         <p className='container-sm'>Review your vocabulary with quizzes</p>
       </div>
-      <div className='section p-4'>
+      <div className='section p-4 mt-3'>
         <ScrollToTop />
         <div className='container-sm'>
-          <Row className='g-4'>
+          <Row className='mt-1 gy-4'>
             {vocabQuiz &&
               vocabQuiz.map((vocabQuiz) => (
                 <Col key={vocabQuiz.id} sm={12} md={6} lg={4} xl={3}>
-                  <Card className='shadow text-center'>
+                  <Card
+                    className='shadow text-center'
+                    as={Link}
+                    to={`/quiz/vocabulary/${vocabQuiz.name}`}
+                    style={{
+                      maxWidth: '100%',
+                      textDecoration: 'none',
+                      color: 'black',
+                    }}>
                     <Card.Img
                       variant='top'
                       className='mx-auto d-block p-2'
@@ -69,7 +77,7 @@ function VocabQuiz() {
                           'linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)',
                       }}
                       to={`/quiz/vocabulary/${vocabQuiz.name}`}>
-                      Start Learning
+                      Start Quiz
                     </Button>
                   </Card>
                 </Col>

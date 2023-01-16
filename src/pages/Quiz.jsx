@@ -25,7 +25,15 @@ function Quiz() {
         <div className='container-sm'>
           <Row className='mt-1 gy-4'>
             <Col md={6}>
-              <Card className='shadow' style={{ maxWidth: '100%' }}>
+              <Card
+                className='shadow'
+                as={Link}
+                to='/quiz/vocabulary'
+                style={{
+                  maxWidth: '100%',
+                  textDecoration: 'none',
+                  color: 'black',
+                }}>
                 <Card.Img
                   className='p-3 mx-auto d-block'
                   variant='top'
@@ -54,7 +62,15 @@ function Quiz() {
             </Col>
 
             <Col md={6}>
-              <Card className='shadow' style={{ maxWidth: '100%' }}>
+              <Card
+                className='shadow'
+                as={Link}
+                to='/quiz/grammar'
+                style={{
+                  maxWidth: '100%',
+                  textDecoration: 'none',
+                  color: 'black',
+                }}>
                 <Card.Img
                   className='p-3 mx-auto d-block'
                   variant='top'

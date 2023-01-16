@@ -47,7 +47,15 @@ function Grammar() {
             {grammar &&
               grammar.map((grammar) => (
                 <Col key={grammar.id} sm={12} md={6} lg={4} xl={3}>
-                  <Card className='shadow text-center'>
+                  <Card
+                    className='shadow text-center'
+                    as={Link}
+                    to={`/vocabulary/${grammar.title}`}
+                    style={{
+                      maxWidth: '100%',
+                      textDecoration: 'none',
+                      color: 'black',
+                    }}>
                     <Card.Body>
                       <Card.Title className='fw-bold'>
                         {grammar.title}
