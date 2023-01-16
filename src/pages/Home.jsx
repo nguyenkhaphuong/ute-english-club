@@ -1,11 +1,11 @@
 import React from 'react'
-import { Button, Row, Col } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
 import ImageSlider from '../components/imageslider/ImageSlider'
 
-import { Link } from 'react-router-dom'
-import ScrollToTop from '../components/scrollToTop/ScrollToTop'
-import ContactForm from '../components/contact/ContactForm'
 import { Helmet } from 'react-helmet-async'
+import ContactForm from '../components/contact/ContactForm'
+import ScrollToTop from '../components/scrollToTop/ScrollToTop'
+import Section from '../components/sections/Section'
 
 function Home() {
   return (
@@ -17,189 +17,49 @@ function Home() {
       </Helmet>
       <div className='section px-4'>
         <ScrollToTop />
-        <div className='section'>
-          <div className='container-sm'>
-            <div className='container-sm'>
-              <Row
-                as={Link}
-                to='/vocabulary'
-                className='border shadow rounded-2 p-4'
-                style={{
-                  textDecoration: 'none',
-                  color: 'black',
-                }}>
-                <Col className='my-auto' sm={6}>
-                  <h2 className='fw-bold'>Vocabulary</h2>
-                  <p>Here are the list of topics that you want to learn</p>
-                  <Button
-                    as={Link}
-                    to='/vocabulary'
-                    className='fw-bold'
-                    style={{
-                      background:
-                        'linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)',
-                    }}>
-                    Start Learning
-                  </Button>
-                </Col>
-                <Col className='p-4 text-center' sm={6}>
-                  <img
-                    src='https://cdn-icons-png.flaticon.com/512/1902/1902654.png'
-                    alt='Vocabulary'
-                    style={{ width: '8.5rem' }}
-                  />
-                </Col>
-              </Row>
-            </div>
-          </div>
-        </div>
+        <Section
+          name='Vocabulary'
+          description='Here are the list of topics that you want to learn'
+          linkTo='/vocabulary'
+          image='https://cdn-icons-png.flaticon.com/512/1902/1902654.png'
+          action='Start Learning'
+        />
       </div>
       <div className='section px-4'>
-        <div className='container-sm'>
-          <div className='container-sm'>
-            <Row
-              className='border shadow rounded-2 p-4'
-              as={Link}
-              to='/grammar'
-              style={{
-                textDecoration: 'none',
-                color: 'black',
-              }}>
-              <Col className='my-auto' sm={6}>
-                <h2 className='fw-bold'>Grammar</h2>
-                <p>
-                  Here are the basic grammar structures you need to master your
-                  English
-                </p>
-                <Button
-                  as={Link}
-                  to='/grammar'
-                  className='fw-bold'
-                  style={{
-                    background:
-                      'linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)',
-                  }}>
-                  Start Learning
-                </Button>
-              </Col>
-              <Col className='p-4 text-center' sm={6}>
-                <img
-                  src='https://cdn-icons-png.flaticon.com/512/6091/6091117.png'
-                  alt='Grammar'
-                  style={{ width: '8.5rem' }}
-                />
-              </Col>
-            </Row>
-          </div>
-        </div>
+        <Section
+          name='Grammar'
+          description='Here are the basic grammar structures you need to master your English'
+          linkTo='/grammar'
+          image='https://cdn-icons-png.flaticon.com/512/6091/6091117.png'
+          action='Start Learning'
+        />
       </div>
       <div className='section px-4'>
-        <div className='container-sm'>
-          <div className='container-sm'>
-            <Row
-              className='border shadow rounded-2 p-4'
-              as={Link}
-              to='/irregularverbs'
-              style={{
-                textDecoration: 'none',
-                color: 'black',
-              }}>
-              <Col className='my-auto' sm={6}>
-                <h2 className='fw-bold'>Irregular Verbs</h2>
-                <p>Here are the common irregular verbs</p>
-                <Button
-                  as={Link}
-                  to='/irregularverbs'
-                  className='fw-bold'
-                  style={{
-                    background:
-                      'linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)',
-                  }}>
-                  Start Learning
-                </Button>
-              </Col>
-              <Col className='p-4 text-center' sm={6}>
-                <img
-                  src='https://cdn-icons-png.flaticon.com/512/4598/4598485.png'
-                  alt='Grammar'
-                  style={{ width: '8.5rem' }}
-                />
-              </Col>
-            </Row>
-          </div>
-        </div>
+        <Section
+          name='Irregular Verbs'
+          description='Here are the common irregular verbs'
+          linkTo='/irregularverbs'
+          image='https://cdn-icons-png.flaticon.com/512/4598/4598485.png'
+          action='Start Learning'
+        />
       </div>
       <div className='section px-4'>
-        <div className='container-sm'>
-          <div className='container-sm'>
-            <Row
-              className='border shadow rounded-2 p-4'
-              as={Link}
-              to='/quiz'
-              style={{
-                textDecoration: 'none',
-                color: 'black',
-              }}>
-              <Col className='my-auto' sm={6}>
-                <h2 className='fw-bold'>Quiz</h2>
-                <p>Review your lessons with quizzes</p>
-                <Button
-                  as={Link}
-                  to='/quiz'
-                  className='fw-bold'
-                  style={{
-                    background:
-                      'linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)',
-                  }}>
-                  Start Practicing
-                </Button>
-              </Col>
-              <Col className='p-4 text-center' sm={6}>
-                <img
-                  src='https://cdn-icons-png.flaticon.com/512/3874/3874176.png'
-                  alt='Quiz'
-                  style={{ width: '8.5rem' }}
-                />
-              </Col>
-            </Row>
-          </div>
-        </div>
+        <Section
+          name='Quiz'
+          description='Review your lessons with quizzes'
+          linkTo='/quiz'
+          image='https://cdn-icons-png.flaticon.com/512/3874/3874176.png'
+          action='Start Practicing'
+        />
       </div>
       <div className='section px-4'>
-        <div className='container-sm'>
-          <div className='container-sm'>
-            <Row
-              className='border shadow rounded-2 p-4'
-              as={Link}
-              to='/about'
-              style={{
-                textDecoration: 'none',
-                color: 'black',
-              }}>
-              <Col className='my-auto' sm={6}>
-                <h2 className='fw-bold'>About</h2>
-                <p>About this website</p>
-                <Button
-                  as={Link}
-                  to='/about'
-                  className='fw-bold'
-                  style={{
-                    background:
-                      'linear-gradient(135deg, rgba(62,64,149,1) 50%, rgba(237,50,55,1) 100%)',
-                  }}>
-                  Learn More
-                </Button>
-              </Col>
-              <Col className='p-4 text-center' sm={6}>
-                <img
-                  src='https://cdn-icons-png.flaticon.com/512/2538/2538026.png'
-                  alt='About'
-                  style={{ width: '8.5rem' }}
-                />
-              </Col>
-            </Row>
-          </div>
-        </div>
+        <Section
+          name='About'
+          description='About this website'
+          linkTo='/about'
+          image='https://cdn-icons-png.flaticon.com/512/2538/2538026.png'
+          action='Learn More'
+        />
       </div>
       <div className='section px-4'>
         <div className='container-sm'>
