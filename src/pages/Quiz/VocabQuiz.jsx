@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Accordion, Button, Card, Row, Col } from 'react-bootstrap'
+import { Button, Card, Row, Col } from 'react-bootstrap'
 
 import { onSnapshot, orderBy, query } from 'firebase/firestore'
 import { vocabQuizCollection } from '../../../firebase'
