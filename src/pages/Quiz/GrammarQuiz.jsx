@@ -78,6 +78,7 @@ function GrammarQuiz() {
           </Row>
         </div>
       </div>
+      <Outlet />
     </>
   )
 }
