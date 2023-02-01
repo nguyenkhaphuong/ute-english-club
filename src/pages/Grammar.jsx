@@ -49,8 +49,6 @@ function Grammar() {
                 <Col key={grammar.id} sm={12} md={6} lg={4} xl={3}>
                   <Card
                     className='shadow text-center'
-                    as={Link}
-                    to={`/grammar/${grammar.link}`}
                     style={{
                       maxWidth: '100%',
                       textDecoration: 'none',

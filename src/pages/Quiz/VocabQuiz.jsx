@@ -50,8 +50,6 @@ function VocabQuiz() {
                 <Col key={vocabQuiz.id} sm={12} md={6} lg={4} xl={3}>
                   <Card
                     className='shadow text-center'
-                    as={Link}
-                    to={`/quiz/vocabulary/${vocabQuiz.name}`}
                     style={{
                       maxWidth: '100%',
                       textDecoration: 'none',

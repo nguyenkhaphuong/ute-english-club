@@ -50,8 +50,6 @@ function Vocabulary() {
                 return (
                   <Col key={vocab.id} xs={12} sm={6} md={6} lg={4} xl={3}>
                     <Card
-                      as={Link}
-                      to={`/vocabulary/${vocab.title}`}
                       className='shadow text-center'
                       style={{
                         maxWidth: '100%',

@@ -7,8 +7,6 @@ export default function Section({ name, description, linkTo, image, action }) {
     <div className='container-sm'>
       <div className='container-sm'>
         <Row
-          as={Link}
-          to={linkTo}
           className='border shadow rounded-2 p-4'
           style={{
             textDecoration: 'none',

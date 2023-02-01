@@ -51,9 +51,7 @@ function GrammarQuiz() {
                       maxWidth: '100%',
                       textDecoration: 'none',
                       color: 'black',
-                    }}
-                    as={Link}
-                    to={`/quiz/grammar/${grammarQuiz.link}`}>
+                    }}>
                     <Card.Body>
                       <Card.Title className='fw-bold'>
                         {grammarQuiz.name}
