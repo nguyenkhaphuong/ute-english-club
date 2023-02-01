@@ -40,7 +40,10 @@ export default function VocabularyTopic() {
     <>
       {vocabTopic &&
         vocabTopic.map((vocab) => (
-          <>
+          <div key={vocab.id}>
+            <Helmet>
+              <title>{vocab.title} | UTE English Club</title>
+            </Helmet>
             <div
               className='p-4'
               style={{
@@ -49,17 +52,14 @@ export default function VocabularyTopic() {
               <h1 className='container-sm display-5 fw-bold'>{vocab.title}</h1>
               <p className='container-sm'>{vocab.description}</p>
             </div>
-            <Helmet>
-              <title>{vocab.title} | UTE English Club</title>
-            </Helmet>
-          </>
+          </div>
         ))}
       <div className='section my-3 px-4'>
         <ScrollToTop />
         <div className='container-sm'>
           {vocabTopic &&
             vocabTopic.map((vocab) => (
-              <>
+              <div key={vocab.id}>
                 <Table striped bordered hover responsive='sm'>
                   <thead
                     style={{
@@ -110,7 +110,7 @@ export default function VocabularyTopic() {
                       })}
                   </tbody>
                 </Table>
-              </>
+              </div>
             ))}
         </div>
       </div>

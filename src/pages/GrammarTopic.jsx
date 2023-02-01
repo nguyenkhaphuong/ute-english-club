@@ -29,7 +29,7 @@ export default function GrammarTopic() {
     <>
       {grammarTopic &&
         grammarTopic.map((grammar) => (
-          <>
+          <div key={grammar.id}>
             <div
               className='p-4'
               style={{
@@ -43,14 +43,14 @@ export default function GrammarTopic() {
             <Helmet>
               <title>{grammar.title} | UTE English Club</title>
             </Helmet>
-          </>
+          </div>
         ))}
       <div className='section my-3 px-4'>
         <ScrollToTop />
         <div>
           {grammarTopic &&
             grammarTopic.map((grammar) => (
-              <>
+              <div key={grammar.id}>
                 <div className='container-sm'>{grammar.description}</div>
                 <div className='container-sm mt-4'>
                   <h2 className='fw-bold'>Basic Form</h2>
@@ -96,7 +96,7 @@ export default function GrammarTopic() {
                       )
                     })}
                 </div>
-              </>
+              </div>
             ))}
         </div>
       </div>
