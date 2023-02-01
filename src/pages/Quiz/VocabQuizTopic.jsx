@@ -44,7 +44,7 @@ export default function VocabQuizTopic() {
     }
 
     const nextQuestion = currentQuestion + 1
-    if (nextQuestion < vocabQuiz[0].questions.length) {
+    if (nextQuestion < quizTopic[0].questions.length) {
       setCurrentQuestion(nextQuestion)
     } else {
       setShowScore(true)

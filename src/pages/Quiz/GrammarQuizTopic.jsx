@@ -44,7 +44,7 @@ export default function GrammarQuizTopic() {
     }
 
     const nextQuestion = currentQuestion + 1
-    if (nextQuestion < grammarQuiz[0].questions.length) {
+    if (nextQuestion < quizTopic[0].questions.length) {
       setCurrentQuestion(nextQuestion)
     } else {
       setShowScore(true)
