@@ -1,8 +1,8 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel'
-import Image1 from '../../images/students.png'
-import Image2 from '../../images/students2.png'
-import Image3 from '../../images/students3.png'
+import Image1 from '../../images/students.jpg'
+import Image2 from '../../images/students2.jpg'
+import Image3 from '../../images/students3.jpg'
 
 function ImageSlider() {
   return (
